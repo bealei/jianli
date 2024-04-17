@@ -1,0 +1,366 @@
+/* ------------------------ 通用设置 start------------------------ */
+
+
+
+@font-face {
+	font-family: 'HarmonyOS_Sans';
+	src: url(../font/HarmonyOS_Sans_SC_Medium.subset.woff2);
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'OPPOSans';
+	src: url(../font/OPPOSans3.0cn-Regular.woff2);
+	font-display: swap;
+}
+
+
+
+
+* {
+	margin: 0px;
+	padding: 0px;
+	text-decoration: none;
+	list-style: none;
+	/* 解决文字变大 */
+	max-height: 9999px;
+	box-sizing: border-box;
+	/* font-weight: 500; */
+	font-family: 'HarmonyOS_San0', OPPOSans;
+}
+
+/* ------------------------ 通用设置  end ------------------------ */
+
+
+
+/* ------------------------ 主体颜色 start------------------------ */
+:root {
+	/* ----- 绿色主题 ----- */
+
+	--body-bg: #f3f4f5;
+	--page-bg: #fff;
+
+	--color: #1994ff;
+	--theme: var(--color);
+
+
+	/* 标题 */
+	--text-border: #ccc;
+	--title: #123;
+	/* 文字 */
+	--text-bold: #456;
+	--text: #789;
+	/* 版权 */
+	--banquan: #369;
+	/* 文字大小 */
+	--fz-name: 30px;
+	--fz-module: 18px;
+	--fz-col: 16px;
+	--fz-all: 15px;
+
+
+}
+
+b {
+	color: var(--text-bold);
+}
+
+/* ------------------------ 主体颜色  end ------------------------ */
+body {
+	background-color: var(--body-bg);
+	font-size: var(--fz-all);
+	color: var(--text);
+
+}
+
+/* 
+h1 {
+	font-size: 18px;
+} */
+
+
+
+/* ------------ 简历设置 ------------ */
+.resume {
+	width: 794px;
+	/* ************************************ */
+	/* height: 1122px; */
+	margin: 0px auto;
+	background-color: var(--page-bg);
+	overflow: hidden;
+	/* 内宽600px */
+	padding: 30px 97px 0 97px;
+}
+
+/* ------------------------ 简历头部 start------------------------ */
+.resume-head {
+	height: 120px;
+
+	text-align: center;
+
+
+	/* border: 1px solid red; */
+}
+
+
+
+.base {
+	display: flex;
+}
+
+.base-left {
+	flex: 4;
+	/* border: 1px solid aqua; */
+	padding-top: 20px
+}
+
+/* 姓名 */
+h1 {
+	margin-bottom: 5px;
+	color: var(--title);
+	font-size: var(--fz-name);
+	font-family: 楷体;
+}
+
+.base-left ul {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10px;
+}
+
+.base-left ul li {
+	padding: 0 10px;
+	height: 14px;
+	position: relative;
+}
+
+.base-left ul li:first-child::after {
+	content: '|';
+	/* height: 1px;
+    width: 1px; */
+	/* font-size: 14px; */
+	color: var(--text-border);
+	position: absolute;
+	top: 0;
+	right: inherit;
+	right: -1px;
+
+}
+
+.base-right {
+	flex: 1;
+	/* border: 1px solid blueviolet; */
+}
+
+/* 头像照片 */
+.base-right img {
+	width: 90px;
+	height: 120px;
+
+	/* 不变形 */
+	object-fit: cover;
+}
+
+
+
+/* ------------------------ 简历头部  end ------------------------ */
+/* ------------------------ 简历主体 start------------------------ */
+.resume-main {
+	width: 100%;
+	/* ************ 1122-120-30-30=942 ************ */
+	height: 942px;
+	overflow: hidden;
+}
+
+/* ------------ 模块 ------------ */
+.module {
+	width: 100%;
+	/* border: 1px solid red; */
+}
+
+/* ------------ 模块标题 ------------ */
+.module-title {
+	height: 30px;
+	line-height: 30px;
+	font-size: var(--fz-module);
+	font-weight: 700;
+	color: var(--theme);
+	border-bottom: 2px solid var(--theme);
+	padding-left: 10px;
+}
+
+/* 盒子内容 */
+.module-content {
+
+	color: var(--text);
+	padding: 15px 0 15px 15px;
+}
+
+/* 盒子小节 */
+.module-wrap {
+	margin-bottom: 7px;
+}
+
+.module-wrap li {
+	margin-bottom: 1px;
+
+}
+
+
+
+
+.col-4 {
+	display: flex;
+	justify-content: space-between;
+	color: var(--text-bold);
+	font-size: var(--fz-col);
+}
+
+.col-4 li {
+	/* flex: 1; */
+	/* border: 1px solid red; */
+}
+
+.col-4 li:nth-child(1) {
+	flex: 30%;
+	font-weight: bold;
+	color: var(--text-bold);
+}
+
+.col-4 li:nth-child(2) {
+	flex: 25%;
+}
+
+.col-4 li:nth-child(3) {
+	flex: 25%;
+}
+
+.col-4 li:nth-child(4) {
+	flex: 25%;
+	font-weight: 700;
+	color: var(--text-bold);
+	/* text-align: right; */
+}
+
+
+
+
+
+
+
+/* ------------ 内容编辑 start------------ */
+
+
+
+.item-edit p {
+	/* font-size: 13px; */
+	/* 向两侧对齐，最后一行无效 */
+	/* text-align: justify; */
+	line-height: 1.4;
+}
+
+
+
+/* ------- 工作经历 ------- */
+.gongzuo .item-edit li {
+	margin-left: 20px;
+	list-style: disc;
+}
+
+/* ------- 项目经验 ------- */
+.xiangmu .item-edit ul {
+	counter-reset: li;
+}
+
+.xiangmu .item-edit li::before {
+	counter-increment: li;
+	content: counter(li) '.';
+}
+
+/* ------- 技能特长 ------- */
+.jineng li:before {
+	content: '\2713';
+	margin: 20px 5px;
+}
+
+.jineng li {
+	margin-bottom: 5px;
+}
+
+/* ------------ 内容编辑 end------------ */
+/* ------------ 三等分 start------------ */
+.col-3 {
+	display: flex;
+	color: var(--text-bold);
+	font-weight: 700;
+	overflow: hidden;
+	font-size: var(--fz-col);
+}
+
+.col-3 li {
+	color: var(--text-bold);
+	/* border: 1px solid var(--text-bold); */
+}
+
+.col-3 li:nth-child(1) {
+	flex: 3;
+}
+
+.col-3 li:nth-child(2) {
+	flex: 2;
+	font-weight: 400;
+	/* color: var(--text-bold); */
+}
+
+.col-3 li:nth-child(3) {
+	flex: 1.6;
+	/* text-align: right; */
+
+}
+
+/* ------------ 三等分  end ------------ */
+/* ------------ 二等分 start------------ */
+.resume-right .col-2 {
+	display: flex;
+	justify-content: space-between;
+	/* justify-content: start; */
+	/* font-size: 17px; */
+
+	overflow: hidden;
+}
+
+/* .col2 ul {
+    flex: 1
+} */
+
+
+/* ------- 荣誉证书 ------- */
+.resume-right .zhengshu ul:nth-child(1) li {
+	margin-left: 20px;
+}
+
+.resume-right .zhengshu li {
+	list-style: circle;
+}
+
+/* ------------ 二等分  end ------------ */
+/* ------------------------ 简历主体  end ------------------------ */
+
+/* ------------------------ 底部版权 start------------------------ */
+.resume-foot {
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: var(--banquan);
+}
+
+.resume-foot a {
+	color: var(--banquan);
+}
+
+/* ------------------------ 底部版权  end ------------------------ */
+
+/* ------------------------ 侧边栏 start ------------------------ */
+
+
+/* ------------------------ 侧边栏  end  ------------------------ */

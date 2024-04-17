@@ -1,0 +1,276 @@
+/* 打印隐藏侧边栏 */
+@media print {
+  header {
+    display: none !important;
+  }
+
+  footer {
+    display: none !important;
+  }
+
+  aside {
+    display: none !important;
+  }
+}
+
+/* 手机端隐藏侧边栏 */
+@media screen and (max-width: 1200px) {
+  aside {
+    display: none !important;
+  }
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: sans-serif;
+}
+
+:root {
+  --theme-color: #1994ff;
+  --body-bg: #f1f2f3;
+  --side-bg: #f3f6f9;
+  --side-boeder: var(--theme-color);
+  --hr-color: #888;
+  --title-color: #333;
+  --text-color: #666;
+  --font-color: #999;
+}
+
+html {
+  /* 锚点平滑过度 */
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--body-bg)
+}
+
+.container {
+  margin: 0 auto;
+  width: 992px;
+  background-color: #fff;
+  padding: 0px 99px;
+}
+
+/* ------------------------ 头部------------------------ */
+header {
+  padding-top: 60px;
+}
+
+.toubu ul {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+}
+
+.toubu li {
+  color: var(--theme-color);
+}
+
+.toubu li:nth-child(1),
+.toubu li:nth-child(3) {
+  flex: 1;
+  position: relative;
+}
+
+.toubu li:nth-child(1)::before {
+  content: '';
+  height: 4px;
+  width: 99%;
+  background-color: var(--theme-color);
+  position: absolute;
+  top: 24px;
+  left: 0;
+}
+
+.toubu li:nth-child(1)::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background-color: var(--theme-color);
+  position: absolute;
+  border-radius: 50%;
+  top: 20px;
+  right: 0;
+}
+
+.toubu li:nth-child(2) {
+  padding: 0 30px;
+  font-size: 24px;
+}
+
+.toubu li:nth-child(3)::before {
+  content: '';
+  height: 4px;
+  width: 99%;
+  background-color: var(--theme-color);
+  position: absolute;
+  top: 24px;
+  right: 0;
+}
+
+.toubu li:nth-child(3)::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background-color: var(--theme-color);
+  position: absolute;
+  border-radius: 50%;
+  top: 20px;
+  left: 0;
+}
+
+/* ------------------------ 主体 ------------------------ */
+main {
+  width: 794px;
+}
+
+
+/* ------------ 模块 start------------ */
+.module {
+  font-size: 18px;
+}
+
+.list-wrap {
+  padding: 58px 0;
+  margin: 0;
+}
+
+.list-wrap img {
+  width: 100%;
+  height: 560px;
+  margin: 0;
+  padding: 0;
+}
+
+.list-wrap p {
+  height: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--theme-color);
+}
+
+/* ------------ 模块  end ------------ */
+
+
+
+/* ------------------------ 底部 start------------------------ */
+footer {
+  --footer-color: #369;
+  --foot-hight:48px;
+  --footer-fz:18px;
+
+  height: var(--foot-hight);
+  line-height: var(--foot-hight);
+  font-size: var(--footer-fz);
+  text-align: center;
+  color: var(--footer-color);
+
+  ul {
+    display: flex;
+    justify-content: center;
+
+    li {
+      margin: 0 4px;
+
+      a {
+        color: var(--footer-color);
+      }   
+    } 
+  }
+}
+/* ------------------------ 底部 end ------------------------ */
+
+
+
+
+aside {
+  position: fixed;
+  right: 24px;
+  top: 1%;
+  /* transform: translateY(-50%); */
+  width: 200px;
+  /* height: 600px; */
+  background-color: var(--side-bg);
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  border: 1px solid var(--side-boeder);
+}
+
+
+
+
+aside h4 {
+  width: 100%;
+  font-size: 14px;
+  color: var(--title-color);
+  text-align: center;
+
+  position: relative;
+}
+
+aside h4::before {
+  position: absolute;
+  content: '';
+  width: 30%;
+  height: 1px;
+  background-color: var(--hr-color);
+  top: 50%;
+  left: 0;
+}
+
+aside h4::after {
+  position: absolute;
+  content: '';
+  width: 30%;
+  height: 1px;
+  background-color: var(--hr-color);
+  top: 50%;
+  right: 0;
+
+}
+
+aside dl {
+  font-size: 12px;
+  margin: 6px auto;
+}
+
+aside dt {
+  display: inline-block;
+  color: var(--text-color);
+  font-weight: 700;
+  border-bottom: 3px double var(--theme-color);
+  margin-bottom: 6px;
+
+}
+
+aside dd {
+  padding-left: 8px;
+  border-left: 4px solid transparent;
+
+}
+
+aside dd a {
+  /* font-size: 12px; */
+  color: var(--font-color);
+}
+
+aside dd a:hover {
+  color: var(--theme-color);
+}
+
+.active a {
+  color: var(--theme-color);
+}
+
+dd.active {
+  border-left: 4px solid var(--theme-color);
+}

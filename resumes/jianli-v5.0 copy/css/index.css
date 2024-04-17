@@ -1,0 +1,308 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "NotoMono";
+  src: url(../../../static/font/NotoMono-Regular.ttf);
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OPlusSans";
+  src: url(../../../static/font/OPlusSans3-Regular.woff2);
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HarmonySans";
+  src: url(../../../static/font/HarmonyOS_Sans_SC_Regular.woff2);
+  font-display: swap;
+  font-style: normal;
+}
+
+/* ------------------------ 通用设置 start------------------------ */
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style: none;
+  /* 解决文字变大 */
+  max-height: 9999px;
+  box-sizing: border-box;
+}
+
+/* ------------------------ 通用设置  end ------------------------ */
+/* ------------------------ 主体颜色 start------------------------ */
+:root {
+  /* 网页 */
+  --body-fz: 16px;
+  --body-bg: #f1f2f3;
+  --color: #1994ff;
+  --theme-color: var(--color);
+  /* 文字 */
+  --name-color: #123;
+  --bold-color: #456;
+  --text-color: #789;
+  /* 边框 */
+  --border-color: #abc;
+  --container-bg: #fff;
+  /* 容器宽度 */
+  --container-width: 794px;
+  /* 容器高度 */
+  --container-height: 1123px;
+  /* 内容宽度 */
+  --content-width: 600px;
+  /* 头部高度 */
+  --head-height: 120px;
+  /* 底部*/
+  --foot-height: 30px;
+  --foot-color: #369;
+  /* 模块 */
+  --module-title-fz: 18px;
+  --pl: 12px;
+  --module-content-gy: 8px;
+  --module-content-gx: var(--pl);
+  --module-wrap-gy: 6px;
+}
+
+b,
+strong {
+  color: var(--bold-color);
+}
+
+/* ------------------------ 主体颜色  end ------------------------ */
+body {
+  color: var(--text-color);
+  background-color: var(--body-bg);
+  font-family: "NotoMono", "OPlusSans", "HarmonySans", sans-serif;
+  font-size: var(--fz-body);
+  line-height: 1.5;
+  font-weight: 400;
+  /* 设置等宽字体 */
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+  --moz-font-feature-settings: "tnum";
+  --webkit-font-feature-settings: "tnum";
+}
+
+/* ------------ 简历设置 ------------ */
+.resume-container {
+  width: 794px;
+  height: 1123px;
+  margin: 0 auto;
+  background-color: var(--container-bg);
+  overflow: hidden;
+}
+
+.resume-content {
+  width: 600px;
+  margin: 0 auto;
+}
+
+/* ------------------------ 简历头部 start------------------------ */
+.resume-head {
+  height: var(--head-height);
+  text-align: center;
+  display: flex;
+  margin-top: 30px;
+}
+
+.head-left {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* 姓名 */
+}
+
+.head-left h1 {
+  color: var(--name-color);
+}
+
+.head-left ul {
+  display: flex;
+  justify-content: center;
+  /* margin-bottom: 10px; */
+}
+
+.head-left ul li {
+  position: relative;
+  padding: 0 12px;
+}
+
+.head-left ul li:first-child::after {
+  content: "|";
+  color: var(--border-color);
+  position: absolute;
+  width: 0px;
+  height: 100%;
+  top: 0;
+  right: 4px;
+}
+
+.head-right {
+  flex: 1;
+  /* 头像照片 */
+}
+
+.head-right img {
+  width: calc(var(--head-height) / 1.4);
+  height: var(--head-height);
+  /* 不变形 */
+  object-fit: cover;
+}
+
+/* ------------------------ 简历头部  end ------------------------ */
+/* ------------------------ 简历主体 start------------------------ */
+.resume-main {
+  width: 100%;
+  /* 1122-120-30-30=942 */
+  height: 943px;
+  overflow: hidden;
+}
+
+/* ------------ 模块 ------------ */
+.module {
+  width: 100%;
+  /* ------------ 模块标题 ------------ */
+  /* 盒子内容 */
+}
+
+.module .module-title {
+  height: 30px;
+  line-height: 30px;
+  font-size: var(--module-title-fz);
+  font-weight: 700;
+  color: var(--theme-color);
+  border-bottom: 2px solid var(--theme-color);
+  padding-left: var(--pl);
+}
+
+.module .module-content {
+  /* font-size: 14px; */
+  color: var(--text-color);
+  padding: var(--module-content-gy) var(--module-content-gx);
+  padding-bottom: 0;
+  /* 盒子小节 */
+}
+
+.module .module-content .module-wrap {
+  margin-bottom: var(--module-wrap-gy);
+}
+
+.module .module-content .module-wrap li {
+  margin-bottom: 1px;
+}
+
+/* ------------ 四等分 start------------ */
+.col-4 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-4 li {
+  font-weight: 700;
+  color: var(--bold-color);
+}
+
+.col-4 li:nth-child(1) {
+  flex: 30%;
+}
+
+.col-4 li:nth-child(2) {
+  flex: 25%;
+  font-weight: 500;
+}
+
+.col-4 li:nth-child(3) {
+  flex: 25%;
+  font-weight: 500;
+}
+
+.col-4 li:nth-child(4) {
+  flex: 25%;
+  text-align: right;
+}
+
+/* ------------ 四等分  end ------------ */
+/* ------------ 三等分 start------------ */
+.col-3 {
+  display: flex;
+  overflow: hidden;
+}
+
+.col-3 li {
+  color: var(--bold-color);
+  font-weight: 700;
+}
+
+.col-3 li:nth-child(1) {
+  flex: 3;
+}
+
+.col-3 li:nth-child(2) {
+  flex: 2;
+  font-weight: 400;
+}
+
+.col-3 li:nth-child(3) {
+  flex: 1.6;
+}
+
+/* ------------ 三等分  end ------------ */
+/* ------------ 内容编辑 start------------ */
+.item-edit p {
+  /* font-size: 13px; */
+  /* 向两侧对齐，最后一行无效 */
+  /* text-align: justify; */
+}
+
+/* ------- 工作经历 ------- */
+.gongzuo .item-edit li {
+  margin-left: 20px;
+  list-style: disc;
+  letter-spacing: 3px;
+}
+
+/* ------- 项目经验 ------- */
+.xiangmu .item-edit ul {
+  counter-reset: li;
+}
+
+/* 计数器 */
+.xiangmu .item-edit li::before {
+  counter-increment: li;
+  content: counter(li) "、";
+}
+
+/* ------- 技能特长 ------- */
+.jineng li:before {
+  content: "\2713";
+  margin: 20px 5px;
+}
+
+.jineng li {
+  margin-bottom: 5px;
+}
+
+/* ------------ 内容编辑 end------------ */
+/* ------------ 二等分 start------------ */
+/* ------- 荣誉证书 ------- */
+/* ------------ 二等分  end ------------ */
+/* ------------------------ 简历主体  end ------------------------ */
+/* ------------------------ 底部版权 start------------------------ */
+.resume-foot {
+  font-family: "OPlusSans";
+  height: var(--foot-height);
+  line-height: var(--foot-height);
+  text-align: center;
+  color: var(--foot-color);
+}
+
+.resume-foot a {
+  color: var(--foot-color);
+}
+
+/* ------------------------ 底部版权  end ------------------------ */
+/* ------------------------ 侧边栏 start ------------------------ */
+/* ------------------------ 侧边栏  end  ------------------------ */

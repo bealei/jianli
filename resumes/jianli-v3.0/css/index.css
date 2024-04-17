@@ -1,0 +1,478 @@
+@font-face {
+	font-family: 'Roboto';
+	src:
+		/* url('../font/Roboto-Regular-webfont.woff') format('woff'), */
+		/* url('../font/roboto.woff2') format('woff2'), */
+		url('../font/roboto-regular.woff') format('woff');
+
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+
+* {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	border: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+
+dd,
+div,
+dl,
+dt,
+input,
+li,
+p,
+textarea,
+ul {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:after,
+:before {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+i {
+	font-style: normal;
+}
+
+div {
+	box-sizing: border-box;
+}
+
+/* ------------------ 主题颜色 start ------------------ */
+:root {
+	--color: #609ef3;
+	--color: #1994ff;
+	--theme-color: var(--color);
+	--body-bg: #f1f2f3;
+	--page-bg: #fff;
+}
+
+/* ------------------ 主题颜色 end ------------------ */
+/* ------------------ 简历 start ------------------ */
+body {
+	background-color: var(--body-bg);
+	font-family: sans-serif;
+}
+
+.resume {
+	width: 794px;
+	/* position: relative; */
+	padding-bottom: 2px;
+	height: 2244px;
+	color: #333;
+	background-color: var(--page-bg);
+	margin: 0 auto;
+	/* font-size: 16px; */
+}
+
+/* ------------------------ 简历 end ------------------------ */
+
+/* ------------------ 头部 start ------------------ */
+.resume-head {
+	padding: 0 50px 0 30px;
+
+}
+
+.head-left {
+	color: var(--theme-color);
+	padding: 15px 0;
+	overflow: hidden;
+
+}
+
+.head-left dt {
+	float: left;
+	font-size: 38px;
+	border-right: 2px solid var(--theme-color);
+	height: 52px;
+	line-height: 52px;
+	padding-right: 15px;
+}
+
+.head-left dd {
+	float: left;
+	line-height: 26px;
+	font-size: 24px;
+	padding-left: 15px;
+	max-width: 560px;
+}
+
+.head-left dd p {
+	font-size: 14px;
+	text-shadow: none;
+}
+
+.head-right {
+	float: right;
+	margin-top: 25px;
+}
+
+.head-right .aa {
+	margin-left: 10px;
+	font-size: 22px;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 50%;
+	color: #fff;
+	background-color: #c19f67;
+}
+
+/* ------------------ 头部 end ------------------ */
+
+/* ------------------ 横线 start ------------------ */
+.resume-line {
+	height: 18px;
+}
+
+.line-l {
+	background-color: var(--theme-color);
+	float: left;
+	/* width: 472px; */
+	width: 60%;
+	height: 18px;
+	position: relative;
+}
+
+.line-l::after {
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	border-style: solid;
+	border-width: 18px 0 0 18px;
+	/* border-color: yellow transparent transparent  transparent; */
+	border-color: #fff transparent;
+	position: absolute;
+	/* left: 100%; */
+	right: 0;
+	top: 0;
+}
+
+
+
+.line-r {
+	float: right;
+	/* width: 300px; */
+	width: 40%;
+	height: 12px;
+	margin: 6px 0 0 0px;
+	background-color: #c19f67;
+	position: relative;
+}
+
+.line-r::before {
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	border-style: solid;
+	border-width: 12px 0 0 12px;
+	border-color: transparent #fff;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+/* ------------------ 横线 end ------------------ */
+
+/* ------------------ 主内容框 start ------------------ */
+.resume-main {
+	/* width: 700px; */
+	border: 1px solid var(--theme-color);
+	margin: 0 44px 0 50px;
+	padding-top: 8px;
+}
+
+/* ------------------ 主内容框 end ------------------ */
+
+
+/* ------------------ 模块 start ------------------ */
+
+.moudle {
+	padding-left: 16px;
+}
+
+/* 标题前倒三角 */
+.moudle-title::before {
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	border-style: solid;
+	border-width: 9px 0 0 16px;
+	border-color: #4e7282 transparent transparent;
+	position: absolute;
+	left: 0;
+	top: 100%;
+}
+
+.moudle-title {
+	position: relative;
+	margin-left: -16px;
+	display: inline-block;
+	vertical-align: top;
+	min-width: 140px;
+	height: 30px;
+	line-height: 30px;
+	background-color: var(--theme-color);
+	color: #fff;
+}
+
+/* 标题后白色三角 */
+.moudle-title::after {
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	border-style: solid;
+	border-width: 31px 0 0 31px;
+	border-color: #fff transparent;
+	position: absolute;
+	right: -1px;
+	top: -1px;
+}
+
+.moudle-title h3 {
+	font-weight: 400;
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding-left: 25px;
+	padding-right: 50px;
+	color: #fff;
+	/* white-space: nowrap; */
+}
+
+/* 45度白蓝白斜线 */
+.moudle-title h3::after {
+	border: 2px solid #fff;
+	display: block;
+	content: "";
+	width: 7px;
+	height: 56px;
+	position: absolute;
+	right: 25px;
+	top: -12px;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	box-sizing: border-box;
+}
+
+
+.moudle-content {
+	border-left: 3px solid var(--theme-color);
+	border-top: 1px solid var(--theme-color);
+	padding: 18px 20px;
+}
+
+.moudle-content div:first-child {
+	margin: 0;
+}
+
+.list-wrap {
+	margin-top: 14px;
+}
+
+/* ------------------ 简历 end ------------------ */
+
+/* ------------------ 基本信息 start ------------------ */
+.basic {
+	min-height: 90px;
+	position: relative;
+}
+
+.info {
+	max-width: 590px;
+	overflow: hidden;
+}
+
+.info li {
+	padding: 3px 5px 3px 0;
+	float: left;
+	min-width: 50%;
+}
+
+.info i {
+	vertical-align: top;
+	/* width: 60px; */
+	min-width: 60px;
+	-moz-text-align-last: justify;
+	text-align-last: justify;
+	display: inline-block;
+}
+
+.info i::after {
+	/* content: '：'; */
+}
+
+.info span::before {
+	content: '：';
+}
+
+.photo {
+	position: absolute;
+	right: 0;
+	top: 56%;
+	z-index: 3;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	margin-top: 10px;
+	max-width: 108px;
+	background-color: #fff;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
+	max-width: 100%;
+	vertical-align: top;
+}
+
+.photo img {
+	width: 120px;
+}
+
+/* ------------------ 基本信息 end ------------------ */
+
+
+/* ------------------ 时间线 start ------------------ */
+.col-3 {
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-grow: 1;
+
+}
+
+.col-3 li {
+	flex: 1;
+	text-align: left;
+	font-weight: 700;
+}
+
+.col-3 li:first-child {
+	/* min-width: 160px; */
+}
+
+.col-3 li:nth-child(2) {
+	flex: 2;
+	text-align: center;
+}
+
+.col-3 li:last-child {
+	white-space: nowrap;
+	text-align: right;
+}
+
+/* ------------------ 时间线 end ------------------ */
+
+
+/* ------------------ 分两行 start ------------------ */
+.col-2 {
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+}
+
+.col-2 li {
+	display: inline-block;
+	text-align: left;
+	font-weight: 700;
+}
+
+.col-2 li:last-child {
+	text-align: right;
+}
+
+/* ------------------ 分两行 end ------------------ */
+
+
+
+/* ------------------ 单纯一行 start ------------------ */
+.item-edit {
+	/* font-size: 13px; */
+	/* margin-top: 6px; */
+	/* line-height: 1.7; */
+	/* width: 100%; */
+}
+
+.item-edit p {
+	/* font-size: 13px; */
+	text-align: justify;
+	line-height: 1.6;
+}
+
+.item-edit p strong::after {
+	/* : */
+	content: '\ff1a';
+}
+
+.item-edit li {
+	padding-left: 1.5em;
+}
+
+.item-edit li::before {
+	/* · */
+	content: "\2022" !important;
+	min-width: 20px;
+	margin-left: -20px;
+	margin-right: 0;
+	text-align: center;
+	font-weight: 700;
+	color: #666;
+	display: inline-block;
+}
+
+/* ------------------ 单纯一行 end ------------------ */
+
+
+
+/* ------------------ 左右 start ------------------ */
+.item-2 {
+	display: flex;
+}
+
+.item-2 ul {
+	width: 100%;
+}
+
+.item-2 ul li::before {
+	content: '\2022';
+	min-width: 20px;
+	text-align: center;
+	font-weight: 700;
+	color: #666;
+	display: inline-block;
+}
+
+.item-2 ul li i::after {
+	content: '\ff1A';
+}
+
+/* ------------------ 左右 end ------------------ */
+
+
+
+/* ------------------ 简历 start ------------------ */
+/* ------------------ 简历 end ------------------ */
+
+
+
+/* ------------------ 简历 start ------------------ */
+/* ------------------ 简历 end ------------------ */

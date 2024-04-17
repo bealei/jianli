@@ -1,0 +1,134 @@
+/* 1.4 */
+/* 打印隐藏侧边栏 */
+@media print {
+  aside {
+    display: none !important;
+  }
+}
+
+/* 手机端隐藏侧边栏 */
+@media screen and (max-width: 500px) {
+  aside {
+    display: none !important;
+  }
+}
+
+/* ------------------------ 侧边栏 ------------------------ */
+:root {
+  --blue: #1989FA;
+  --green: #5CB87A;
+  --yellow: #FFC107;
+  --red: #F56C6C;
+}
+
+aside {
+  position: fixed;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+aside li {
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  color: #888;
+  text-align: center;
+}
+
+
+aside li:hover {
+  color: #000;
+  border: 1px solid #000;
+  font-weight: 700;
+}
+
+/* -------- 配色 start -------- */
+.peise {
+  position: relative;
+}
+
+.peise ul {
+  position: absolute;
+  bottom: 50px;
+  display: none;
+}
+
+.peise:hover #peise {
+  /* display: flex; */
+  display: block;
+}
+
+#peise li:nth-child(1) {
+  background-color: var(--blue);
+}
+
+#peise li:nth-child(2) {
+  background-color: var(--green);
+}
+
+#peise li:nth-child(3) {
+  background-color: var(--red);
+}
+
+#peise li:nth-child(4) {
+  background-color: var(--yellow);
+}
+
+/* -------- 配色 end -------- */
+
+/* -------- 下载 start -------- */
+.down {
+  position: relative;
+}
+
+.down ul {
+  /* display: flex; */
+  position: absolute;
+  top: 50px;
+  /* right: 50px; */
+  display: none;
+}
+
+/* hover 显示 */
+.down:hover #down {
+  /* display: flex; */
+  display: block;
+}
+
+#down li:nth-child(1) {
+  color: var(--blue);
+}
+
+#down li:nth-child(2) {
+  color: var(--green);
+}
+
+#down li:nth-child(3) {
+  color: var(--red);
+}
+
+#down li:nth-child(4) {
+  color: var(--yellow);
+}
+
+#down li:nth-child(1):hover {
+  border-color: var(--blue);
+}
+
+#down li:nth-child(2):hover {
+  border-color: var(--green);
+}
+
+#down li:nth-child(3):hover {
+  border-color: var(--red);
+}
+
+#down li:nth-child(4):hover {
+  border-color: var(--yellow);
+}
+
+/* -------- 下载 end -------- */

@@ -1,0 +1,170 @@
+* {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-decoration: none;
+
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+
+	background-color: #282C34;
+}
+
+/* #box {
+	width: 1000px;
+	height: 480px;
+
+	border: 9px dotted #5C6370;
+	margin: 188px auto;
+	text-align: center;
+	font-size: 18px;
+} */
+
+
+main .row>div {
+	/* border: #90ce1e 1px solid; */
+	position: relative;
+	z-index: 1;
+	color: #6e716e;
+}
+
+.module:hover {
+
+
+	border: 1px solid #6e716e;
+
+
+}
+
+.module {
+	padding: 20px 0;
+	position: relative;
+	height: 100%;
+	border: 1px solid transparent;
+}
+
+
+
+.module::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, .1);
+	z-index: -1;
+}
+
+
+
+
+
+
+
+
+
+
+
+.container {
+	display: flex;
+	flex-direction: column;
+	/* border: 1px solid red; */
+	min-height: 94vh;
+}
+
+/* 头部 */
+header {
+	/* border: 1px solid green; */
+
+}
+
+/* 标题 */
+h1 {
+	color: #fff;
+	font-weight: 700;
+}
+
+/* 头部信息 */
+.head-info,
+.head-info a {
+	color: #999;
+}
+
+.head-info>div {
+	/* border: 1px solid green; */
+}
+
+/* 主内容 */
+main {
+	border: 9px dotted #5C6370;
+	border: 9px dotted #3b4048;
+	min-height: 56vh;
+}
+
+/* 分列标题 */
+main p {
+	font-size: 20px;
+	color: #d8d8d8;
+	font-weight: bold;
+	margin-bottom: 20px;
+	/* 字符左右间距 */
+	letter-spacing: 5px;
+}
+
+/* 分列内容 */
+main a {
+	display: block;
+	margin: 7px auto;
+}
+
+main a:hover {
+	color: #FFFC00 !important;
+}
+
+#a1,
+#a2,
+#a3,
+#a4,
+#a5 {
+	/* border: 1px solid gold; */
+}
+
+#a1 a {
+	color: #E06C75;
+}
+
+#a2 a {
+	color: #98C379;
+}
+
+#a3 a {
+	color: #D19A66;
+}
+
+#a4 a {
+	color: #61AFEF;
+}
+
+#a5 a {
+	color: #C678DD;
+}
+
+
+footer {
+	margin-top: auto;
+	color: #fff;
+}
+
+footer a {
+	color: #888;
+}
+
+footer a:hover {
+	color: #999;
+}

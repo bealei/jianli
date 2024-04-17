@@ -1,0 +1,67 @@
+/* 1.4 */
+/* 打印隐藏侧边栏 */
+@media print {
+  aside {
+    display: none !important;
+  }
+}
+
+/* 手机端隐藏侧边栏 */
+@media screen and (max-width: 500px) {
+  aside {
+    display: none !important;
+  }
+}
+
+/* ------------------------ 侧边栏 ------------------------ */
+:root {
+  --blue: #1989FA;
+  --green: #5CB87A;
+  --yellow: #FFC107;
+  --red: #F56C6C;
+}
+
+aside {
+  position: fixed;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+aside li {
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  color: #888;
+  text-align: center;
+}
+
+
+aside li:hover {
+  color: #000;
+  border: 1px solid #000;
+  font-weight: 700;
+}
+
+/* -------- 配色 start -------- */
+
+aside li:nth-child(1) {
+  background-color: var(--blue);
+}
+
+aside li:nth-child(2) {
+  background-color: var(--green);
+}
+
+aside li:nth-child(3) {
+  background-color: var(--red);
+}
+
+aside li:nth-child(4) {
+  background-color: var(--yellow);
+}
+
+/* -------- 配色 end -------- */

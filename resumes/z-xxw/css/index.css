@@ -1,0 +1,129 @@
+/* ------------ 通用设置 ------------ */
+* {
+	margin: 0px;
+	padding: 0px;
+	/* 解决文字变大 */
+	max-height: 9999px;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	font-family: sans-serif;
+	user-select: none;
+}
+
+
+.container {
+	width: 992px;
+	height: 1403px;
+	margin: 0 auto;
+	background-color: #f1f1f1;
+	position: relative;
+}
+
+/* ------------ 头部 ------------ */
+header {
+	height: 60px;
+	line-height: 60px;
+	width: 100%;
+	background-color: #25b887;
+	color: #fff;
+	display: flex;
+	align-items: center;
+}
+
+header img {
+	height: 40px;
+	margin: 0 58px;
+
+}
+
+.title {
+	font-size: 20px;
+}
+
+
+
+
+/* ------------ 模块 ------------ */
+
+
+.module {
+	width: 876px;
+	background-color: #fff;
+	padding: 7px 0;
+	margin: 10px auto;
+}
+
+/* 标题 */
+.module-title {
+	height: 45px;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 7px;
+}
+
+/* 左上角 */
+.title-bg {
+	background-color: #66cdab;
+	padding: 0 30px;
+}
+
+.title-bg img {
+	height: 45px;
+}
+
+/* 右上角 */
+.module-title span {
+	color: #2c74c4;
+	font-size: 14px;
+	padding: 6px 40px;
+}
+
+.module-title span img {
+	vertical-align: middle;
+	margin-right: 8px;
+}
+
+/* 中间 */
+.module-content {
+	display: flex;
+	text-align: center;
+
+}
+
+.module-left {
+	flex: 1;
+	padding-top: 40px;
+}
+
+.module-left img {
+	width: 105px;
+}
+
+.module-right {
+	flex: 3;
+	border-left: 2px solid #e6e6e6;
+
+}
+
+.module-right img {
+	width: 625px;
+}
+
+/* 学位 */
+.xuewei .module-left {
+	padding-top: 6px;
+}
+
+
+
+footer {
+	height: 20px;
+	line-height: 20px;
+	width: 100%;
+	color: #a8a8a8;
+	font-size: 14px;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+}
