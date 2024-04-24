@@ -58,9 +58,7 @@
   /* 底部*/
   --foot-height: 30px;
   --foot-color: #369;
-
   --font-bg: #f3f6f9;
-
   /* 模块 */
   --module-title-fz: 18px;
   /* --title-bg: #d4f2de; */
@@ -69,7 +67,6 @@
   --module-content-gy: 8px;
   --module-content-gx: var(--pl);
   --module-wrap-gy: 6px;
-
   /* 徽章 */
   --huizhang1: #ff9999;
   --huizhang2: #ffcc99;
@@ -115,9 +112,11 @@ body {
   --moz-font-feature-settings: "tnum";
   --webkit-font-feature-settings: "tnum";
 }
+
 strong {
   color: var(--text-color-bold);
 }
+
 /* ------------ 简历设置 ------------ */
 .resume {
   width: var(--container-width);
@@ -140,143 +139,148 @@ strong {
   border-bottom: 5px solid;
   border-image: linear-gradient(90deg, #fff, #42bc7a, #fff);
   border-image-slice: 1;
-
   /* 背景字体 */
-  .bg-font {
-    position: absolute;
-    width: 100%;
-    color: var(--font-bg);
-    font-family: "NotoMono", "OPlusSans", "HarmonySans", sans-serif;
-    font-size: 133px;
-    letter-spacing: 5px;
-    font-weight: 700;
-    /* 无法选中 */
-    user-select: none;
-    top: 0;
-    z-index: -1;
-  }
-
   /* 头像包裹*/
-  .touxiang {
-    --size: 100px;
-    --gap: 3px;
-    position: relative;
-    width: var(--size);
-    height: var(--size);
-    margin: 10px auto;
-    margin-bottom: 10px;
-    z-index: 3;
-    /* 头像框旋转  */
-    &::before {
-      position: absolute;
-      content: "";
-      /* display: block; */
-      width: calc(var(--size) + var(--gap) * 2);
-      height: calc(var(--size) + var(--gap) * 2);
-      border-radius: 50%;
-      background-image: linear-gradient(#12c2e9, #c471ed, #f64f59);
-      animation: xuanzhuan 3s linear infinite;
-      top: calc(0px - var(--gap));
-      left: calc(0px - var(--gap));
-      z-index: -1;
-    }
-    /* 头像照片 */
-    img {
-      border-radius: 50%;
-      height: 100%;
-      width: 100%;
-      /* 不变形 */
-      object-fit: cover;
-    }
-  }
-
   /* 姓名 */
-  h2 {
-    color: var(--name-color);
-    height: 30px;
-    position: relative;
-    /* 字体左右间距 */
-    letter-spacing: 7px;
-    margin-bottom: 5px;
-    /* 认证 V 图标 */
-    i::after {
-      height: 30px;
-      line-height: 30px;
-      color: #ffb502;
-      font-style: normal;
-      font-family: "iconfont";
-      content: "\e601";
-      font-size: 20px;
-    }
-  }
   /* 求职意向 */
-  .qiuzhi {
-    margin-bottom: 5px;
-  }
-  .col-shu {
-    display: flex;
-    justify-content: center;
-
-    li {
-      color: #42bc7a;
-      padding: 0 6px 0 2px;
-
-      &::after {
-        content: "|";
-        color: var(--border-color);
-      }
-
-      /* 最后一个没有“|” */
-      &:nth-child(5):after {
-        content: "";
-      }
-    }
-  }
-
   /* 徽章 */
-  .huizhang {
-    /* position: absolute; */
-    /* left: 0; */
-    /* bottom: 5px; */
-    width: 100%;
-    user-select: none;
-    display: flex;
-    justify-content: center;
+}
 
-    li {
-      color: #fff;
-      font-size: 14px;
-      border-radius: 16px;
-      /* border: 1px solid #dadada; */
-      padding: 2px 10px;
-      margin: 0 12px;
+.resume-head .bg-font {
+  position: absolute;
+  width: 100%;
+  color: var(--font-bg);
+  font-family: "NotoMono", "OPlusSans", "HarmonySans", sans-serif;
+  font-size: 133px;
+  letter-spacing: 5px;
+  font-weight: 700;
+  /* 无法选中 */
+  user-select: none;
+  top: 0;
+  z-index: -1;
+}
 
-      /* 徽章颜色 */
-      &:nth-child(1) {
-        background-color: var(--huizhang1);
-      }
+.resume-head .touxiang {
+  --size: 100px;
+  --gap: 3px;
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  margin: 10px auto;
+  margin-bottom: 10px;
+  z-index: 3;
+  /* 头像框旋转  */
+  /* 头像照片 */
+}
 
-      &:nth-child(2) {
-        background-color: var(--huizhang2);
-      }
+.resume-head .touxiang::before {
+  position: absolute;
+  content: "";
+  /* display: block; */
+  width: calc(var(--size) + var(--gap) * 2);
+  height: calc(var(--size) + var(--gap) * 2);
+  border-radius: 50%;
+  background-image: linear-gradient(#12c2e9, #c471ed, #f64f59);
+  animation: xuanzhuan 3s linear infinite;
+  top: calc(0px - var(--gap));
+  left: calc(0px - var(--gap));
+  z-index: -1;
+}
 
-      &:nth-child(3) {
-        background-color: var(--huizhang3);
-      }
+.resume-head .touxiang img {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  /* 不变形 */
+  object-fit: cover;
+}
 
-      &:nth-child(4) {
-        background-color: var(--huizhang4);
-      }
+.resume-head h2 {
+  color: var(--name-color);
+  height: 30px;
+  position: relative;
+  /* 字体左右间距 */
+  letter-spacing: 7px;
+  margin-bottom: 5px;
+  /* 认证 V 图标 */
+}
 
-      &:nth-child(5) {
-        background-color: var(--huizhang5);
-      }
+.resume-head h2 i::after {
+  height: 30px;
+  line-height: 30px;
+  color: #ffb502;
+  font-style: normal;
+  font-family: "iconfont";
+  content: "\e601";
+  font-size: 20px;
+}
 
-      &:nth-child(6) {
-        background-color: var(--huizhang6);
-      }
-    }
-  }
+.resume-head .qiuzhi {
+  margin-bottom: 5px;
+}
+
+.resume-head .col-shu {
+  display: flex;
+  justify-content: center;
+}
+
+.resume-head .col-shu li {
+  color: #42bc7a;
+  padding: 0 6px 0 2px;
+  /* 最后一个没有“|” */
+}
+
+.resume-head .col-shu li::after {
+  content: "|";
+  color: var(--border-color);
+}
+
+.resume-head .col-shu li:nth-child(5):after {
+  content: "";
+}
+
+.resume-head .huizhang {
+  /* position: absolute; */
+  /* left: 0; */
+  /* bottom: 5px; */
+  width: 100%;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+}
+
+.resume-head .huizhang li {
+  color: #fff;
+  font-size: 14px;
+  border-radius: 16px;
+  /* border: 1px solid #dadada; */
+  padding: 2px 10px;
+  margin: 0 12px;
+  /* 徽章颜色 */
+}
+
+.resume-head .huizhang li:nth-child(1) {
+  background-color: var(--huizhang1);
+}
+
+.resume-head .huizhang li:nth-child(2) {
+  background-color: var(--huizhang2);
+}
+
+.resume-head .huizhang li:nth-child(3) {
+  background-color: var(--huizhang3);
+}
+
+.resume-head .huizhang li:nth-child(4) {
+  background-color: var(--huizhang4);
+}
+
+.resume-head .huizhang li:nth-child(5) {
+  background-color: var(--huizhang5);
+}
+
+.resume-head .huizhang li:nth-child(6) {
+  background-color: var(--huizhang6);
 }
 
 /* 旋转动画 */
@@ -301,30 +305,30 @@ strong {
 /* 模块  */
 .module {
   width: 100%;
-
   /* 模块标题 */
-
-  .module-title {
-    height: 30px;
-    line-height: 30px;
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--theme-color);
-    background: var(--module-title-bg);
-    border-left: 6px solid var(--theme-color);
-    /* 背景长短调节 */
-    /* display: inline; */
-    padding: 0 24px 0 12px;
-  }
   /* 模块内容 */
-  .module-content {
-    padding: var(--module-content-gy) var(--module-content-gx);
-  }
-
   /* 模块包 */
-  .module-wrap {
-    margin-bottom: 10px;
-  }
+}
+
+.module .module-title {
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--theme-color);
+  background: var(--module-title-bg);
+  border-left: 6px solid var(--theme-color);
+  /* 背景长短调节 */
+  /* display: inline; */
+  padding: 0 24px 0 12px;
+}
+
+.module .module-content {
+  padding: var(--module-content-gy) var(--module-content-gx);
+}
+
+.module .module-wrap {
+  margin-bottom: 10px;
 }
 
 /* ----- 三列左对齐 ----- */
@@ -333,18 +337,19 @@ strong {
   color: var(--bold-color);
   font-weight: 700;
   /* flex: 1; */
-  li {
-    flex: 1;
-    /* border: 1px solid red; */
+}
 
-    &:nth-child(2) {
-      flex: 1.5;
-    }
+.col-3 li {
+  flex: 1;
+  /* border: 1px solid red; */
+}
 
-    &:nth-child(3) {
-      flex: 1;
-    }
-  }
+.col-3 li:nth-child(2) {
+  flex: 1.5;
+}
+
+.col-3 li:nth-child(3) {
+  flex: 1;
 }
 
 /* ------------------------ 简历主体-单体布局  end ------------------------ */
@@ -415,6 +420,7 @@ strong {
 .jineng li {
   margin-bottom: 5px;
 }
+
 .pingjia li:before {
   content: "\2713";
   margin: 20px 5px;
@@ -426,9 +432,10 @@ strong {
   line-height: 30px;
   text-align: center;
   color: var(--foot-color);
-  a {
-    color: var(--foot-color);
-  }
+}
+
+.resume-foot a {
+  color: var(--foot-color);
 }
 
 /* ------------------------底部版权 start------------------------ */

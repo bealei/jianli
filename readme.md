@@ -17,20 +17,19 @@ git@github.com:bealei/jianli.git
 
 ```
 
-#### 介绍
+#### 推送
 
-#### 目录说明
+```shell
+# 将项目添加到本地暂存区
+git add .
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+# 将项目提交到 本地Git仓库，并附上注释
+git commit -m "Initial commit"
 
-#### 使用说明
+# 本地仓库推送到远程仓库
+git push github master
+```
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
 
-#### 参与贡献
 
 [bealei](https://blog.csdn.net/bealei)

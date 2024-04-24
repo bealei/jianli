@@ -1,0 +1,137 @@
+{
+  "status": "success",
+  "msg": "请求成功",
+  "content": {
+    "title": "RESUMES",
+    "phone": "13145205866",
+    "wechat": "Guai_OK",
+    "qq": "9066225",
+    "email": "bealei@163.com",
+    "name": "Demo",
+    "text": "@bealei",
+    "datas": {
+      "a1": {
+        "title": "信息资料",
+        "res": [
+          {
+            "name": "学信网",
+            "path": "./resumes/z-xxw/index.html"
+          },
+          {
+            "name": "毕业证书",
+            "path": "./resumes/z-byzs/index.html"
+          },
+          {
+            "name": "荣誉证书",
+            "path": "./resumes/z-ryzs/index.html"
+          },
+          {
+            "name": "湄职院成绩单",
+            "path": "./resumes/z-mzycjd/index.html"
+          },
+          {
+            "name": "个人经历",
+            "path": "./resumes/z-grjl/index.html"
+          }
+        ]
+      },
+      "a2": {
+        "title": "v1.0版本",
+        "res": [
+          {
+            "name": "v1.0",
+            "path": "./resumes/jianli-v1.0/index.html"
+          },
+          {
+            "name": "v1.1",
+            "path": "./resumes/jianli-v1.1/index.html"
+          },
+          {
+            "name": "v1.2",
+            "path": "./resumes/jianli-v1.2/index.html"
+          },
+          {
+            "name": "v1.3",
+            "path": "./resumes/jianli-v1.3/index.html"
+          },
+          {
+            "name": "v1.4",
+            "path": "./resumes/jianli-v1.4/index.html"
+          }
+        ]
+      },
+      "a3": {
+        "title": "v2.0版本",
+        "res": [
+          {
+            "name": "v2.0",
+            "path": "./resumes/jianli-v2.0/index.html"
+          },
+          {
+            "name": "v2.0-2021",
+            "path": "./resumes/jianli-v2.0-2021/index.html"
+          },
+          {
+            "name": "v2.0-2022",
+            "path": "./resumes/jianli-v1.0-2022/index.html"
+          },
+          {
+            "name": "v2.0-2023",
+            "path": "./resumes/jianli-v2.0-2023/index.html"
+          }
+        ]
+      },
+      "a4": {
+        "title": "v3.0版本",
+        "res": [
+          {
+            "name": "v3.0",
+            "path": "./resumes/jianli-v3.0/index.html"
+          }
+        ]
+      },
+      "a5": {
+        "title": "v4.0版本",
+        "res": [
+          {
+            "name": "v4.0",
+            "path": "./resumes/jianli-v4.0/index.html"
+          },
+          {
+            "name": "v4.0-2023",
+            "path": "./resumes/jianli-v4.0-2023/index.html"
+          },
+          {
+            "name": "v4.0-2023-all",
+            "path": "./resumes/jianli-v4.0-2023-all/index.html"
+          },
+          {
+            "name": "v4.1",
+            "path": "./resumes/jianli-v4.1/index.html"
+          }
+        ]
+      },
+      "a6": {
+        "title": "v5.0版本",
+        "res": [
+          {
+            "name": "v5.0",
+            "path": "./resumes/jianli-v5.0/index.html"
+          },
+          {
+            "name": "v5.0-2023",
+            "path": "./resumes/jianli-v5.0-2023/index.html"
+          },
+          {
+            "name": "v5.0-2024",
+            "path": "./resumes/jianli-v5.0-2024/index.html"
+          },
+          {
+            "name": "v5.1",
+            "path": "./resumes/jianli-v5.1/index.html"
+          }
+        ]
+      }
+    }
+  }
+}

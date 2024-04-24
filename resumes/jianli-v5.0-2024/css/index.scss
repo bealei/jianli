@@ -1,6 +1,6 @@
 @font-face {
   font-family: "NotoMono";
-  src: url(../../../static/font/NotoMono-Regular.ttf);
+  src: url(../../../static/font/NotoMono-Regular.woff2);
   font-display: swap;
   font-style: normal;
 }
@@ -18,17 +18,6 @@
   font-style: normal;
 }
 
-/* ------------------------ 通用设置 start------------------------ */
-* {
-  margin: 0px;
-  padding: 0px;
-  text-decoration: none;
-  list-style: none;
-  /* 解决文字变大 */
-  max-height: 9999px;
-  box-sizing: border-box;
-}
-
 /* ------------------------ 通用设置  end ------------------------ */
 
 /* ------------------------ 主体颜色 start------------------------ */
@@ -36,23 +25,25 @@
   /* 网页 */
   --body-fz: 16px;
   --body-bg: #f1f2f3;
-
   --color: #1994ff;
   --theme-color: var(--color);
-
   /* 文字 */
+  --high-light: #000;
   --name-color: #123;
   --bold-color: #456;
   --text-color: #789;
   /* 边框 */
   --border-color: #abc;
-
+  /* 容器背景色 */
   --container-bg: #fff;
-
   /* 容器宽度 */
   --container-width: 794px;
   /* 容器高度 */
+  /*1123-30-120-30=943  auto*/
   --container-height: 1123px;
+  --container-height: 2246px;
+  // --container-height: auto;
+  --main-height: auto;
   /* 内容宽度 */
   --content-width: 600px;
   /* 头部高度 */
@@ -63,13 +54,25 @@
 
   /* 模块 */
   --module-title-fz: 18px;
-  --pl: 12px;
+  --gap: 12px;
   --module-content-gy: 8px;
-  --module-content-gx: var(--pl);
+  --module-content-gx: var(--gap);
+  /* 小行块 */
   --module-wrap-gy: 6px;
 }
-
-b,
+/* ------------------------ 通用设置 start------------------------ */
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style: none;
+  /* 解决文字变大 */
+  max-height: 9999px;
+  box-sizing: border-box;
+}
+b {
+  color: var(--name-color);
+}
 strong {
   color: var(--bold-color);
 }
@@ -87,15 +90,30 @@ body {
   font-feature-settings: "tnum";
   --moz-font-feature-settings: "tnum";
   --webkit-font-feature-settings: "tnum";
+  position: relative;
+  z-index: -5;
 }
 
 /* ------------ 简历设置 ------------ */
 .resume-container {
-  width: 794px;
-  height: 1123px;
+  width: var(--container-width);
+  height: var(--container-height);
   margin: 0 auto;
   background-color: var(--container-bg);
+  padding-top: 30px;
+  position: relative;
   overflow: hidden;
+  z-index: -3;
+}
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--body-bg);
+  width: 100%;
+  position: absolute;
+  top: 1122px;
+  left: 0;
+  z-index: -2;
 }
 .resume-content {
   width: 600px;
@@ -106,7 +124,6 @@ body {
   height: var(--head-height);
   text-align: center;
   display: flex;
-  margin-top: 30px;
 }
 
 .head-left {
@@ -114,18 +131,23 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+
   /* 姓名 */
   h1 {
     color: var(--name-color);
   }
+  .qiuzhi {
+    color: var(--high-light);
+  }
   ul {
     display: flex;
     justify-content: center;
-    /* margin-bottom: 10px; */
+
     li {
       position: relative;
       padding: 0 12px;
     }
+
     li:first-child::after {
       content: "|";
       color: var(--border-color);
@@ -135,11 +157,16 @@ body {
       top: 0;
       right: 4px;
     }
+    a {
+      color: var(--bold-color);
+      font-weight: 500;
+    }
   }
 }
 
 .head-right {
   flex: 1;
+
   /* 头像照片 */
   img {
     width: calc(var(--head-height) / 1.4);
@@ -154,14 +181,14 @@ body {
 /* ------------------------ 简历主体 start------------------------ */
 .resume-main {
   width: 100%;
-  /* 1122-120-30-30=942 */
-  height: 943px;
-  overflow: hidden;
+  height: var(--main-height);
+  // overflow: hidden;
 }
 
 /* ------------ 模块 ------------ */
 .module {
   width: 100%;
+
   /* ------------ 模块标题 ------------ */
   .module-title {
     height: 30px;
@@ -170,14 +197,16 @@ body {
     font-weight: 700;
     color: var(--theme-color);
     border-bottom: 2px solid var(--theme-color);
-    padding-left: var(--pl);
+    padding-left: var(--gap);
   }
-  /* 盒子内容 */
+
+  /* 模块内容 */
   .module-content {
     /* font-size: 14px; */
     color: var(--text-color);
     padding: var(--module-content-gy) var(--module-content-gx);
     padding-bottom: 0;
+
     /* 盒子小节 */
     .module-wrap {
       margin-bottom: var(--module-wrap-gy);
@@ -191,22 +220,23 @@ body {
 .col-4 {
   display: flex;
   justify-content: space-between;
+
   li {
     font-weight: 700;
     color: var(--bold-color);
+
     &:nth-child(1) {
-      flex: 30%;
+      flex: 35%;
     }
     &:nth-child(2) {
-      flex: 25%;
+      flex: 20%;
       font-weight: 500;
     }
-
     &:nth-child(3) {
-      flex: 25%;
+      flex: 20%;
       font-weight: 500;
+      text-align: center;
     }
-
     &:nth-child(4) {
       flex: 25%;
       text-align: right;
@@ -256,10 +286,16 @@ body {
 }
 
 /* ------- 项目经验 ------- */
+.xiangmu .item-edit p {
+  &:nth-child(1) span,
+  &:nth-child(2) span {
+    color: var(--bold-color);
+  }
+}
+
 .xiangmu .item-edit ul {
   counter-reset: li;
 }
-
 /* 计数器 */
 .xiangmu .item-edit li::before {
   counter-increment: li;
@@ -269,6 +305,7 @@ body {
 /* ------- 技能特长 ------- */
 .jineng li:before {
   content: "\2713";
+  content: "\2022";
   margin: 20px 5px;
 }
 
@@ -276,30 +313,47 @@ body {
   margin-bottom: 5px;
 }
 
+/* ------- 自我评价 ------- */
+.pingjia li:before {
+  content: "\2713";
+  margin: 20px 5px;
+}
 /* ------------ 内容编辑 end------------ */
 
 /* ------------ 二等分 start------------ */
-// .resume-right .col-2 {
-//   display: flex;
-//   justify-content: space-between;
-//   overflow: hidden;
-// }
+.zhengshu .col-2 {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
 
-/* ------- 荣誉证书 ------- */
-// .resume-right .zhengshu ul:nth-child(1) li {
-//   margin-left: 20px;
-// }
+  ul {
+    // border: 1px solid #000;
+    flex: 1;
+  }
 
-// .resume-right .zhengshu li {
-//   list-style: circle;
-// }
+  ul:last-child {
+    flex: 0.7;
+  }
+
+  ul:nth-child(1) li {
+    margin-left: 20px;
+  }
+  li {
+    list-style: circle;
+  }
+}
 
 /* ------------ 二等分  end ------------ */
 /* ------------------------ 简历主体  end ------------------------ */
 
 /* ------------------------ 底部版权 start------------------------ */
 .resume-foot {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: var(--container-bg);
   font-family: "OPlusSans";
+  width: 100%;
   height: var(--foot-height);
   line-height: var(--foot-height);
   text-align: center;
@@ -311,7 +365,77 @@ body {
 }
 
 /* ------------------------ 底部版权  end ------------------------ */
+/* ------------------------ 自定义 start ------------------------ */
 
+/* 教育背景 */
+.jiaoyu .module-wrap:nth-child(1) li:nth-child(2),
+.jiaoyu .module-wrap:nth-child(2) li:nth-child(3) {
+  color: var(--high-light);
+  font-weight: 500;
+}
+/* 项目经验 */
+.xiangmu .module-wrap:nth-child(1) {
+  margin-bottom: 10px;
+}
+
+.resume-head {
+  margin-top: 50px;
+}
+
+.module {
+  margin-top: 18px;
+}
+
+.module-content {
+  // 原始值：8px
+  --module-content-gy: 12px;
+}
+.module-wrap {
+  // 原始值：6px
+  --module-wrap-gy: 10px;
+}
+
+@media print {
+  hr {
+    height: 0;
+  }
+  /* 项目经验 */
+  .xiangmu .module-wrap:nth-child(2) {
+    margin-top: 100px;
+    padding-top: 30px;
+  }
+
+  .module.jineng,
+  .module.peixun,
+  .module.zhengshu,
+  .module.pingjia {
+    margin-top: 0px !important;
+  }
+
+  .jineng .module-content,
+  .peixun .module-content,
+  .zhengshu .module-content,
+  .pingjia .module-content {
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    // 原始值：8px
+    // --module-content-gy: 6px;
+  }
+  .jineng .module-wrap,
+  .peixun .module-wrap,
+  .zhengshu .module-wrap,
+  .pingjia .module-wrap {
+    margin-bottom: 4px !important;
+    // 原始值：6px
+    // --module-wrap-gy: 4px;
+  }
+  .peixun .module-wrap {
+    margin-bottom: 4px !important;
+    --module-wrap-gy: 0px;
+  }
+}
+
+/* ------------------------ 自定义  end  ------------------------ */
 /* ------------------------ 侧边栏 start ------------------------ */
 
 /* ------------------------ 侧边栏  end  ------------------------ */

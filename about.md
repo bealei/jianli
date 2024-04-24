@@ -155,8 +155,8 @@ js框架：
 
 ## v2.0
 
-- jQuery-3.6.0
-- vue-2.7.14
+- jQuery-3.6.3
+- vue-2.6.12
 - data.json
 
 
@@ -165,9 +165,8 @@ js框架：
 
 ## v3.0
 
-- jQuery-3.6.0
-- vue-2.7.14
-- data.json
+- vue-2.2.2
+- data.js
 
 
 
@@ -177,8 +176,8 @@ js框架：
 
 ## v4.0
 
-- vue-2.7.14
-- datajson.js
+- vue-2.2.2
+- data.json
 
 
 
@@ -189,7 +188,7 @@ js框架：
 ## v5.0
 
 - vue3.3.3
-- datajson.js
+- data.json
 
 
 
