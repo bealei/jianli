@@ -131,6 +131,17 @@
                 >
               </div>
             </div>
+            <div id="a7" class="col-xl col-lg-3 col-md-4 col-sm-6 col-12 py-5">
+              <div class="module">
+                <p>{{datas.datas.a7.title}}</p>
+                <a
+                  :href="item.path"
+                  v-for="(item, index) in datas.datas.a7.res"
+                  :key="index"
+                  >{{item.name}}</a
+                >
+              </div>
+            </div>
           </div>
         </main>
         <!-- 底部 -->

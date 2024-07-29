@@ -90,8 +90,6 @@ body {
   font-feature-settings: "tnum";
   --moz-font-feature-settings: "tnum";
   --webkit-font-feature-settings: "tnum";
-  position: relative;
-  z-index: -5;
 }
 
 /* ------------ 简历设置 ------------ */
@@ -101,20 +99,9 @@ body {
   margin: 0 auto;
   background-color: var(--container-bg);
   padding-top: 30px;
-  position: relative;
   overflow: hidden;
-  z-index: -3;
 }
-hr {
-  border: none;
-  height: 1px;
-  background-color: var(--body-bg);
-  width: 100%;
-  position: absolute;
-  top: 1122px;
-  left: 0;
-  z-index: -2;
-}
+
 .resume-content {
   width: 600px;
   margin: 0 auto;
@@ -365,7 +352,29 @@ hr {
 }
 
 /* ------------------------ 底部版权  end ------------------------ */
-/* ------------------------ 自定义 start ------------------------ */
+/* ------------------------ 侧边栏 start ------------------------ */
+
+/* ------------------------ 侧边栏  end  ------------------------ */
+/* ------------------------ 个性化设置 start ------------------------ */
+
+body {
+  position: relative;
+  z-index: -5;
+}
+.resume-container {
+  position: relative;
+  z-index: -3;
+}
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--body-bg);
+  width: 100%;
+  position: absolute;
+  top: 1122px;
+  left: 0;
+  z-index: -2;
+}
 
 /* 教育背景 */
 .jiaoyu .module-wrap:nth-child(1) li:nth-child(2),
@@ -435,7 +444,4 @@ hr {
   }
 }
 
-/* ------------------------ 自定义  end  ------------------------ */
-/* ------------------------ 侧边栏 start ------------------------ */
-
-/* ------------------------ 侧边栏  end  ------------------------ */
+/* ------------------------ 个性化设置  end  ------------------------ */

@@ -127,7 +127,36 @@
             "path": "./resumes/jianli-v5.0-2024/index.html"
           },
           {
+            "name": "v5.0-2024-1",
+            "path": "./resumes/jianli-v5.0-2024-1/index.html"
+          },
+          {
             "name": "v5.0-2024-2",
+            "path": "./resumes/jianli-v5.0-2024-2/index.html"
+          }
+        ]
+      },
+      "a7": {
+        "title": "资源下载",
+        "res": [
+          {
+            "name": "鸿蒙字体",
+            "path": "./static/files/HarmonyOS_Sans_SC_Regular.ttf"
+          },
+          {
+            "name": "oppo字体",
+            "path": "./static/files/OPLUS_Sans_Regular.ttf"
+          },
+          {
+            "name": "简历2024.pdf",
+            "path": "./static/files/庄磊简历.pdf"
+          },
+          {
+            "name": "简历2024-副本.pdf",
+            "path": "./static/files/庄磊简历 - 副本.pdf"
+          },
+          {
+            "name": "未知",
             "path": "./resumes/jianli-v5.0-2024-2/index.html"
           }
         ]

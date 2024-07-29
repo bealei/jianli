@@ -41,8 +41,7 @@
   --container-width: 794px;
   /* 容器高度 */
   /*1123-30-120-30=943  auto*/
-  --container-height: 1123px;
-  --container-height: 2246px;
+  --container-height: auto;
   --main-height: auto;
   /* 内容宽度 */
   --content-width: 600px;
@@ -341,9 +340,6 @@ body {
 /* ------------------------ 简历主体  end ------------------------ */
 /* ------------------------ 底部版权 start------------------------ */
 .resume-foot {
-  position: absolute;
-  left: 0;
-  bottom: 0;
   background-color: var(--container-bg);
   font-family: "OPlusSans";
   width: 100%;
@@ -361,59 +357,8 @@ body {
 /* ------------------------ 侧边栏 start ------------------------ */
 /* ------------------------ 侧边栏  end  ------------------------ */
 /* ------------------------ 个性化设置 start ------------------------ */
-body {
-  position: relative;
-  z-index: -5;
-}
-
-.resume-container {
-  position: relative;
-  z-index: -3;
-}
-
-hr {
-  border: none;
-  height: 1px;
-  background-color: var(--body-bg);
-  width: 100%;
-  position: absolute;
-  top: 1122px;
-  left: 0;
-  z-index: -2;
-}
-
-/* 教育背景 */
-.jiaoyu .module-wrap:nth-child(1) li:nth-child(2),
-.jiaoyu .module-wrap:nth-child(2) li:nth-child(3) {
-  color: var(--high-light);
-  font-weight: 500;
-}
-
 /* 项目经验 */
-.xiangmu .module-wrap:nth-child(1) {
-  margin-bottom: 10px;
-}
-
-.resume-head {
-  margin-top: 50px;
-}
-
-.module {
-  margin-top: 18px;
-}
-
-.module-content {
-  --module-content-gy: 12px;
-}
-
-.module-wrap {
-  --module-wrap-gy: 10px;
-}
-
 @media print {
-  hr {
-    height: 0;
-  }
   /* 项目经验 */
   .xiangmu .module-wrap:nth-child(2) {
     margin-top: 100px;

@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>庄磊简历 v5.0</title>
+    <title>庄磊简历v5.0</title>
     <meta name="viewport" content="width=device-width" />
     <!-- favicon图标 -->
     <link
@@ -67,6 +67,7 @@
                 class="module-wrap"
                 v-for=" (item, index) in datas.jiaoyu.data"
                 :key="index"
+                v-show="index<2"
               >
                 <ul class="col-4">
                   <li>{{ item.name }}</li>
@@ -87,7 +88,7 @@
                 class="module-wrap"
                 v-for="(item, index) in datas.gongzuo.data"
                 :key="index"
-                v-show="index<4"
+                v-show="index<10"
               >
                 <ul class="col-3">
                   <li>{{item.name}}</li>
@@ -140,7 +141,7 @@
           <!-- ------------ 项目经验  end ------------ -->
 
           <!-- ------------ 专业技能 start------------ -->
-          <div class="module jineng" v-if="datas.jineng">
+          <div class="module jineng" v-if="datas.jineng0">
             <div class="module-title">{{datas.jineng.title}}</div>
             <div class="module-content">
               <div class="module-wrap">
@@ -149,7 +150,7 @@
                     <li
                       v-for="(item, index) in datas.jineng.data"
                       :key="index"
-                      v-show="index < 6 "
+                      v-show="index < 10 "
                     >
                       {{item.text}}
                     </li>
@@ -161,7 +162,7 @@
           <!-- ------------ 专业技能  end  ------------ -->
 
           <!-- ------------ 培训经历 start ------------ -->
-          <div class="module peixun" v-if="datas.peixun">
+          <div class="module peixun" v-if="datas.peixun0">
             <div class="module-title">{{datas.peixun.title}}</div>
             <div class="module-content">
               <div
@@ -180,9 +181,40 @@
           </div>
           <!-- ------------ 培训经历  end  ------------ -->
 
-          <!-- ------------ 荣誉证书 start ------------ -->
-          <div class="module zhengshu" v-if="datas.zhengshu">
+          <!-- ------------ 荣誉证书zhengshu start ------------ -->
+          <div class="module zhengshu" v-if="datas.zhengshu0">
             <div class="module-title">{{datas.zhengshu.title}}</div>
+            <div class="module-content">
+              <div class="module-wrap">
+                <div class="col-2">
+                  <!-- 左边 -->
+                  <ul>
+                    <li
+                      v-for="(item, index) in datas.zhengshu.data.ry"
+                      :key="index"
+                      v-show="index<6"
+                    >
+                      {{item.name}}{{item.text}}
+                    </li>
+                  </ul>
+                  <!-- 右边 -->
+                  <ul>
+                    <li
+                      v-for="(item, index) in datas.zhengshu.data.zs"
+                      :key="index"
+                      v-show="index<6"
+                    >
+                      {{item.name}}{{item.text}}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ------------ 荣誉证书zhengshu end  ------------ -->
+          <!-- ------------ 荣誉证书ryzs start ------------ -->
+          <div class="module ryzs" v-if="datas.ryzs">
+            <div class="module-title">{{datas.ryzs.title}}</div>
             <div class="module-content">
               <div class="module-wrap">
                 <div class="col-2">
@@ -195,7 +227,7 @@
               </div>
             </div>
           </div>
-          <!-- ------------ 荣誉证书 end  ------------ -->
+          <!-- ------------ 荣誉证书ryzs end  ------------ -->
 
           <!-- ------------ 个人评价 start ------------ -->
           <div class="module pingjia" v-if="datas.pingjia">
@@ -237,7 +269,7 @@
           const datas = ref(null);
           (async function () {
             // 替换为实际的JSON数据源URL
-            const url = "api/data.json";
+            const url = "./api/data.json";
             try {
               // 1. 发起fetch请求
               const response = await fetch(url);
