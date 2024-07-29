@@ -1,14 +1,20 @@
-name: Sync to Gitee
-# 将github代码同步到gitee
+# 工作流名字
+name: Github to Gitee
+# 触发条件
 on:
   push:
-    branches: [master]
+    branches: ["master"]
+  # 允许您从“操作”选项卡手动运行此工作流
   workflow_dispatch:
 
+# 任务
 jobs:
   build:
+    # 服务器环境：最新版 Ubuntu
     runs-on: ubuntu-latest
+    # 步骤
     steps:
+      # 1、github 代码同步到 gitee 的仓库
       - name: Sync to Gitee
         uses: wearerequired/git-mirror-action@master
         env:
