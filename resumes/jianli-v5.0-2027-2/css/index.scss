@@ -16,7 +16,12 @@
   font-display: swap;
   font-style: normal;
 }
-
+@font-face {
+  font-family: "OppoSans3";
+  src: url(../font/OPPOSans3.0cn-Regular.woff2);
+  font-display: swap;
+  font-style: normal;
+}
 @font-face {
   font-family: "HarmonySans";
   src: url(../font/HarmonyOS_Sans_SC_Regular.woff2);
@@ -95,7 +100,7 @@ body {
   color: var(--color-text);
   background-color: var(--body-bg);
   // font-family: "NotoMono", "OppoSans", "HarmonySans", sans-serif;
-  font-family: "NotoMono", "OppoSans", sans-serif;
+  font-family: "NotoMono", "OppoSans3", sans-serif;
   font-size: var(--body-fz);
   font-weight: var(--fw-Regular);
   line-height: var(--line-height);
