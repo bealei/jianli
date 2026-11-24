@@ -1,0 +1,385 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "NotoMono";
+  src: url(../font/NotoMono-Regular.woff2);
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OPlusSans";
+  src: url(../font/OPlusSans3-Regular.woff2);
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OppoSans";
+  src: url(../font/OPPO\ Sans\ 4.0.ttf);
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HarmonySans";
+  src: url(../font/HarmonyOS_Sans_SC_Regular.woff2);
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MiSans";
+  src: url(../font/MiSans-Regular.woff2);
+  font-display: swap;
+  font-style: normal;
+}
+/* ------------------------ 通用设置  end ------------------------ */
+/* ------------------------ 主体颜色 start------------------------ */
+:root {
+  /* ========== 基础全局 ========== */
+  --body-fz: 16px;
+  --section-title-fz: 18px;
+  --line-height: 1.5;
+  --fw-Regular: 400;
+  --fw-Medium: 550;
+  --fw-bold: 700;
+  /* 网页背景色 */
+  --body-bg: #f1f2f3;
+  /* 页面背景色 */
+  --page-bg: #fff;
+  --theme-color: #1994ff;
+  /* 文字 */
+  --color-title: #123;
+  --color-bold: #456;
+  --color-text: #789;
+  --color-border: #abc; /* 边框 */
+  /* ========== A4 页面尺寸 ========== */
+  --page-width: 794px;
+  --page-height: 1123px;
+  --page-height2: 2246px;
+  /* 内容宽度 */
+  --content-width: 600px;
+  /* 头部高度 */
+  --head-height: 120px;
+  /* 底部*/
+  --foot-height: 30px;
+  --foot-color: #369;
+  /* 模块 */
+  --gap: 12px;
+  --gap-x: 12px;
+  --gap-y: 6px;
+  --section-gy: var(--gap);
+  --section-gx: var(--gap);
+  --wrap-gy: 6px;
+  --col-gy: 2px;
+  --li-gy: 1px;
+}
+
+/* ------------------------ 通用设置 start------------------------ */
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style: none;
+  /* 解决文字变大 */
+  max-height: 9999px;
+  box-sizing: border-box;
+}
+
+strong {
+  font-weight: 550;
+  color: var(--color-bold);
+}
+
+/* ------------------------ 主体颜色  end ------------------------ */
+body {
+  color: var(--color-text);
+  background-color: var(--body-bg);
+  font-family: "NotoMono", "OppoSans", sans-serif;
+  font-size: var(--body-fz);
+  font-weight: var(--fw-Regular);
+  line-height: var(--line-height);
+  /* 设置等宽字体 */
+  font-feature-settings: "tnum" 1;
+  font-variant-numeric: tabular-nums;
+  --moz-font-feature-settings: "tnum";
+  --webkit-font-feature-settings: "tnum";
+}
+
+/* ------------ 简历设置 ------------ */
+.resume-container {
+  width: var(--page-width);
+  margin: 0 auto;
+  background-color: var(--page-bg);
+}
+
+.resume-page {
+  width: var(--page-width);
+  height: var(--page-height);
+  background-color: var(--page-bg);
+  position: relative;
+  border-bottom: 1px solid var(--body-bg);
+}
+
+.resume-content {
+  width: 600px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+/* ------------------------ 简历头部 start------------------------ */
+.resume-head {
+  height: var(--head-height);
+  text-align: center;
+  display: flex;
+}
+
+.resume-head__left {
+  flex: 4; /* 480*120=600 */
+}
+.resume-head__left .resume-head__info {
+  display: flex;
+  align-items: baseline; /* 重点：文字基线对齐 */
+  height: 60px;
+  /* 姓名 */
+}
+.resume-head__left .resume-head__info .resume-username {
+  flex: 0 0 50%; /* ✅ 固定占50%，不放大、不缩小，锁死宽度 */
+  color: var(--color-title);
+  font-weight: var(--fw-bold);
+  font-size: 32px;
+  letter-spacing: 32px;
+  text-align: center;
+  padding: var(--gap-y) var(--gap-x);
+}
+.resume-head__left .resume-head__info .qiuzhi-intention {
+  flex: 0 0 50%; /* ✅ 固定占50%，不放大、不缩小，锁死宽度 */
+  color: var(--color-title);
+  text-align: left;
+  display: flex; /* 补上！开启flex布局 */
+  align-items: baseline;
+  padding: var(--gap-y) var(--gap-x);
+}
+.resume-head__left .resume-head__info .qiuzhi-intention .qiuzhi-label {
+  font-weight: var(--fw-Medium);
+  flex-shrink: 0; /* ✅ 关键：禁止压缩，固定不动，不会被往前推 */
+  white-space: nowrap;
+}
+.resume-head__left .resume-head__info .qiuzhi-intention .qiuzhi-value {
+  max-width: 140px;
+  outline: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* 想要省略号打开这个 */
+  cursor: text;
+}
+.resume-head__left .resume-head__info-list {
+  display: flex;
+  flex-wrap: wrap;
+  color: var(--color-bold);
+  padding: var(--gap-y) var(--gap-x);
+}
+.resume-head__left .resume-head__info-list .resume-head__info-item {
+  position: relative;
+}
+.resume-head__left .resume-head__info-list li:nth-child(1),
+.resume-head__left .resume-head__info-list li:nth-child(4) {
+  width: 100px;
+  text-align: start;
+}
+.resume-head__left .resume-head__info-list li:nth-child(2),
+.resume-head__left .resume-head__info-list li:nth-child(5) {
+  width: 140px;
+}
+.resume-head__left .resume-head__info-list li:nth-child(3),
+.resume-head__left .resume-head__info-list li:nth-child(6) {
+  width: 180px;
+}
+.resume-head__left .resume-head__info-list li::after {
+  content: "|";
+  color: var(--color-border);
+  position: absolute;
+  top: 0;
+  right: 0px;
+}
+.resume-head__left .resume-head__info-list li:nth-child(3)::after,
+.resume-head__left .resume-head__info-list li:nth-child(6)::after {
+  content: "";
+}
+
+/* 头像照片 */
+.resume-head__right {
+  flex: 1;
+}
+.resume-head__right .resume-head__photo {
+  width: calc(var(--head-height) / 1.4);
+  height: var(--head-height);
+  /* 不变形 */
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+/* ------------------------ 简历头部  end ------------------------ */
+/* ------------------------ 简历主体 start------------------------ */
+/* ------------ 模块 ------------ */
+.section {
+  width: 100%;
+}
+.section .section-title {
+  height: 30px;
+  line-height: 30px;
+  font-size: var(--section-title-fz);
+  font-weight: var(--fw-bold);
+  color: var(--theme-color);
+  border-bottom: 2px solid var(--theme-color);
+  padding-left: var(--section-gx);
+}
+.section .section-content {
+  color: var(--color-text);
+  padding: var(--section-gy) var(--section-gx);
+  padding-bottom: 0;
+}
+
+/* ------------ 四等分 start------------ */
+.col-4 {
+  display: flex;
+}
+.col-4 li {
+  font-weight: var(--fw-Medium);
+  color: var(--color-bold);
+}
+.col-4 li:nth-child(1) {
+  flex: 35%;
+}
+.col-4 li:nth-child(2) {
+  flex: 20%;
+}
+.col-4 li:nth-child(3) {
+  flex: 20%;
+  text-align: center;
+}
+.col-4 li:nth-child(4) {
+  flex: 25%;
+  text-align: right;
+}
+
+/* ------------ 四等分  end ------------ */
+/* ------------ 三等分 start------------ */
+.col-3 {
+  display: flex;
+  overflow: hidden;
+}
+.col-3 li {
+  color: var(--color-bold);
+  font-weight: 600;
+}
+.col-3 li:nth-child(1) {
+  flex: 3;
+}
+.col-3 li:nth-child(2) {
+  flex: 2;
+  font-weight: 400;
+}
+.col-3 li:nth-child(3) {
+  flex: 1.6;
+}
+
+/* ------------ 三等分  end ------------ */
+/* ------------ 内容编辑 start------------ */
+.item-edit li:before {
+  display: inline-block;
+  width: var(--body-fz);
+  content: "•"; /* 实心圆点，Bullet，U+2022 */
+}
+
+/* ------- 项目经验 ------- */
+.xiangmu .item-edit p:nth-child(1) span,
+.xiangmu .item-edit p:nth-child(2) span {
+  color: var(--color-bold);
+}
+.xiangmu .item-edit ul {
+  counter-reset: li;
+}
+.xiangmu .item-edit li::before {
+  counter-increment: li;
+  content: counter(li) "、";
+}
+
+/* ------- 自我评价 ------- */
+.pingjia li:before {
+  content: "✓"; /* 对勾，Check Mark，U+2713 */
+}
+
+/* ------------ 内容编辑 end------------ */
+/* ------------ 二等分 start------------ */
+.zhengshu .col-2 {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.zhengshu .col-2 ul {
+  flex: 1;
+}
+.zhengshu .col-2 ul:last-child {
+  flex: 0.7;
+}
+.zhengshu .col-2 ul:nth-child(1) li {
+  margin-left: 20px;
+}
+.zhengshu .col-2 li {
+  list-style: circle;
+}
+
+/* ------------ 二等分  end ------------ */
+/* ------------------------ 简历主体  end ------------------------ */
+/* ------------------------ 底部版权 start------------------------ */
+.resume-foot {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: var(--page-bg);
+  width: 100%;
+  height: var(--foot-height);
+  line-height: var(--foot-height);
+  text-align: center;
+  color: var(--foot-color);
+}
+.resume-foot a {
+  color: var(--foot-color);
+}
+
+/* ------------------------ 底部版权  end ------------------------ */
+/* ------------------------ 侧边栏 start ------------------------ */
+/* ------------------------ 侧边栏  end  ------------------------ */
+/* ------------------------ 个性化设置 start ------------------------ */
+/* 模块 */
+.section {
+  margin-top: var(--section-gy);
+}
+
+/* 三列 */
+.col-3 {
+  margin-bottom: var(--col-gy);
+}
+
+/* 盒子小节 */
+.section-wrap {
+  margin-bottom: var(--wrap-gy);
+}
+.section-wrap li {
+  margin-bottom: var(--li-gy); /* 看情况加 */
+}
+
+/* 教育背景 */
+.jiaoyu .section-wrap:nth-child(1) li:nth-child(2),
+.jiaoyu .section-wrap:nth-child(2) li:nth-child(3) {
+  color: var(--color-title);
+}
+
+/* 项目经验 */
+.xaingmu .section {
+  margin-top: 0;
+}
+
+@media print {
+  .resume-page {
+    border-bottom: none;
+  }
+}
+/* ------------------------ 个性化设置  end  ------------------------ */

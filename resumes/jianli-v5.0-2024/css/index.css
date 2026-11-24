@@ -5,21 +5,18 @@
   font-display: swap;
   font-style: normal;
 }
-
 @font-face {
   font-family: "OPlusSans";
   src: url(../../../static/font/OPlusSans3-Regular.woff2);
   font-display: swap;
   font-style: normal;
 }
-
 @font-face {
   font-family: "HarmonySans";
   src: url(../../../static/font/HarmonyOS_Sans_SC_Regular.woff2);
   font-display: swap;
   font-style: normal;
 }
-
 /* ------------------------ 通用设置  end ------------------------ */
 /* ------------------------ 主体颜色 start------------------------ */
 :root {
@@ -122,25 +119,20 @@ body {
   justify-content: space-evenly;
   /* 姓名 */
 }
-
 .head-left h1 {
   color: var(--name-color);
 }
-
 .head-left .qiuzhi {
   color: var(--high-light);
 }
-
 .head-left ul {
   display: flex;
   justify-content: center;
 }
-
 .head-left ul li {
   position: relative;
   padding: 0 12px;
 }
-
 .head-left ul li:first-child::after {
   content: "|";
   color: var(--border-color);
@@ -150,7 +142,6 @@ body {
   top: 0;
   right: 4px;
 }
-
 .head-left ul a {
   color: var(--bold-color);
   font-weight: 500;
@@ -160,12 +151,12 @@ body {
   flex: 1;
   /* 头像照片 */
 }
-
 .head-right img {
   width: calc(var(--head-height) / 1.4);
   height: var(--head-height);
   /* 不变形 */
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* ------------------------ 简历头部  end ------------------------ */
@@ -179,9 +170,7 @@ body {
 .module {
   width: 100%;
   /* ------------ 模块标题 ------------ */
-  /* 模块内容 */
 }
-
 .module .module-title {
   height: 30px;
   line-height: 30px;
@@ -191,7 +180,9 @@ body {
   border-bottom: 2px solid var(--theme-color);
   padding-left: var(--gap);
 }
-
+.module {
+  /* 模块内容 */
+}
 .module .module-content {
   /* font-size: 14px; */
   color: var(--text-color);
@@ -199,11 +190,9 @@ body {
   padding-bottom: 0;
   /* 盒子小节 */
 }
-
 .module .module-content .module-wrap {
   margin-bottom: var(--module-wrap-gy);
 }
-
 .module .module-content .module-wrap li {
   margin-bottom: 1px;
 }
@@ -213,27 +202,22 @@ body {
   display: flex;
   justify-content: space-between;
 }
-
 .col-4 li {
   font-weight: 700;
   color: var(--bold-color);
 }
-
 .col-4 li:nth-child(1) {
   flex: 35%;
 }
-
 .col-4 li:nth-child(2) {
   flex: 20%;
   font-weight: 500;
 }
-
 .col-4 li:nth-child(3) {
   flex: 20%;
   font-weight: 500;
   text-align: center;
 }
-
 .col-4 li:nth-child(4) {
   flex: 25%;
   text-align: right;
@@ -245,21 +229,17 @@ body {
   display: flex;
   overflow: hidden;
 }
-
 .col-3 li {
   color: var(--bold-color);
   font-weight: 700;
 }
-
 .col-3 li:nth-child(1) {
   flex: 3;
 }
-
 .col-3 li:nth-child(2) {
   flex: 2;
   font-weight: 400;
 }
-
 .col-3 li:nth-child(3) {
   flex: 1.6;
 }
@@ -280,8 +260,7 @@ body {
 }
 
 /* ------- 项目经验 ------- */
-.xiangmu .item-edit p:nth-child(1) span,
-.xiangmu .item-edit p:nth-child(2) span {
+.xiangmu .item-edit p:nth-child(1) span, .xiangmu .item-edit p:nth-child(2) span {
   color: var(--bold-color);
 }
 
@@ -297,8 +276,8 @@ body {
 
 /* ------- 技能特长 ------- */
 .jineng li:before {
-  content: "\2713";
-  content: "\2022";
+  content: "✓";
+  content: "•";
   margin: 20px 5px;
 }
 
@@ -308,7 +287,7 @@ body {
 
 /* ------- 自我评价 ------- */
 .pingjia li:before {
-  content: "\2713";
+  content: "✓";
   margin: 20px 5px;
 }
 
@@ -319,19 +298,15 @@ body {
   justify-content: space-between;
   overflow: hidden;
 }
-
 .zhengshu .col-2 ul {
   flex: 1;
 }
-
 .zhengshu .col-2 ul:last-child {
   flex: 0.7;
 }
-
 .zhengshu .col-2 ul:nth-child(1) li {
   margin-left: 20px;
 }
-
 .zhengshu .col-2 li {
   list-style: circle;
 }
@@ -388,5 +363,4 @@ body {
     --module-wrap-gy: 0px;
   }
 }
-
 /* ------------------------ 个性化设置  end  ------------------------ */

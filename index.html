@@ -1,209 +1,137 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>简历</title>
-    <meta name="viewport" content="width=device-width" />
-    <!-- favicon图标 -->
-    <link rel="shortcut icon" href="./static/favicon.png" type="image/x-icon" />
-    <!-- 51la网站统计 -->
-    <script src="./static/js/tongji.js"></script>
-    <link rel="stylesheet" href="./static/css/bootstrap-5.2.0.min.css" />
-    <link rel="stylesheet" href="./static/css/index.css" />
-  </head>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RESUMES · 庄磊的简历归档</title>
+<link rel="shortcut icon" href="./static/favicon.png" type="image/x-icon" />
+<link rel="stylesheet" href="./static/css/index.css" />
+</head>
+<body>
+<div class="wrap">
 
-  <body>
-    <div class="container-fluid">
-      <div id="app" class="container mt-md-5">
-        <header class="p-5 text-center">
-          <div class="row text-center">
-            <h1 class="py-5">RESUMES</h1>
-          </div>
-          <div class="row head-info justify-content-around">
-            <div class="col-lg-auto col-sm-6">
-              电话：<a :href="'tel:'+datas.phone">{{datas.phone}}</a>
-            </div>
-            <div class="col-lg-auto col-sm-6">
-              微信：<span id="wechat">{{datas.wechat}}</span>
-              <button
-                type="button"
-                class="btn btn-success rounded-pill btn-sm"
-                id="copyBT"
-              >
-                微信交谈
-              </button>
-            </div>
-            <div class="col-lg-auto col-sm-6">
-              QQ：{{datas.qq}}<a
-                target="_blank"
-                href="http://wpa.qq.com/msgrd?v=3&uin=9066225&site=qq&menu=yes"
-                ><img
-                  border="0"
-                  src="http://wpa.qq.com/pa?p=2:9066225:51"
-                  alt="点击这里给我发消息"
-                  title="点击这里给我发消息"
-              /></a>
-            </div>
-            <div class="col-lg-auto col-sm-6">
-              <a :href="'mailto:'+datas.email" rel="nofollow"
-                >邮箱：{{datas.email}}</a
-              >
-              <a
-                target="_blank"
-                href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=VjQzNzozPxYnJ3g1OTs"
-                style="text-decoration: none"
-              >
-                <img
-                  src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_02.png"
-                />
-              </a>
-            </div>
-          </div>
-        </header>
+  <!-- ===== 头部（文案来自数据 meta）===== -->
+  <header class="hero">
+    <p class="eyebrow" id="eyebrow"></p>
+    <h1 class="site-title" id="siteTitle"></h1>
+    <p class="site-sub" id="siteSub"></p>
+    <nav class="contact" id="contact"></nav>
+  </header>
 
-        <!-- 中间部分 -->
-        <main>
-          <!-- 在这里加个判断才不会vue报错 -->
-          <div class="row px-5 text-center" v-if="!!datas.datas">
-            <div id="a1" class="col-xl col-lg-3 col-md-4 col-sm-6 col-12 py-5">
-              <div class="module">
-                <p>{{datas.datas.a1.title}}</p>
-                <a
-                  :href="item.path"
-                  v-for="(item, index) in datas.datas.a1.res"
-                  :key="index"
-                  >{{item.name}}</a
-                >
-              </div>
-            </div>
-            <div id="a2" class="col-xl col-lg-3 col-md-4 col-sm-6 col-12 py-5">
-              <div class="module">
-                <p>{{datas.datas.a2.title}}</p>
-                <a
-                  :href="item.path"
-                  v-for="(item, index) in datas.datas.a2.res"
-                  :key="index"
-                  >{{item.name}}</a
-                >
-              </div>
-            </div>
-            <div id="a3" class="col-xl col-lg-3 col-md-4 col-sm-6 col-12 py-5">
-              <div class="module">
-                <p>{{datas.datas.a3.title}}</p>
-                <a
-                  :href="item.path"
-                  v-for="(item, index) in datas.datas.a3.res"
-                  :key="index"
-                  >{{item.name}}</a
-                >
-              </div>
-            </div>
-            <div id="a4" class="col-xl col-lg-3 col-md-4 col-sm-6 col-12 py-5">
-              <div class="module">
-                <p>{{datas.datas.a4.title}}</p>
-                <a
-                  :href="item.path"
-                  v-for="(item, index) in datas.datas.a4.res"
-                  :key="index"
-                  >{{item.name}}</a
-                >
-              </div>
-            </div>
-            <div id="a5" class="col-xl col-lg-3 col-md-4 col-sm-6 col-12 py-5">
-              <div class="module">
-                <p>{{datas.datas.a5.title}}</p>
-                <a
-                  :href="item.path"
-                  v-for="(item, index) in datas.datas.a5.res"
-                  :key="index"
-                  >{{item.name}}</a
-                >
-              </div>
-            </div>
-            <div id="a6" class="col-xl col-lg-3 col-md-4 col-sm-6 col-12 py-5">
-              <div class="module">
-                <p>{{datas.datas.a6.title}}</p>
-                <a
-                  :href="item.path"
-                  v-for="(item, index) in datas.datas.a6.res"
-                  :key="index"
-                  >{{item.name}}</a
-                >
-              </div>
-            </div>
-            <div id="a7" class="col-xl col-lg-3 col-md-4 col-sm-6 col-12 py-5">
-              <div class="module">
-                <p>{{datas.datas.a7.title}}</p>
-                <a
-                  :href="item.path"
-                  v-for="(item, index) in datas.datas.a7.res"
-                  :key="index"
-                  >{{item.name}}</a
-                >
-              </div>
-            </div>
-          </div>
-        </main>
-        <!-- 底部 -->
-        <footer class="text-center py-3">
-          Copyright &copy; <a href="//zhuanglei.top">zhuanglei</a>
-          版权所有.
-        </footer>
-      </div>
-    </div>
-  </body>
+  <!-- ===== 四个板块由脚本按 static/api/data.js 渲染 ===== -->
+  <main id="sections"></main>
 
-  <script src="./static/js/jquery-3.2.1.min.js"></script>
-  <script src="./static/js/vue-2.6.12.min.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
+  <!-- ===== 页脚 ===== -->
+  <footer>
+    <span id="footLeft"></span>
+    <span id="footRight"></span>
+  </footer>
 
-  <script>
-    // ------------ vue ------------
-    Vue.config.productionTip = true; //阻止 vue 在启动时生成生产提示。
-    new Vue({
-      el: "#app",
-      data() {
-        return {
-          datas: [],
-          color: [
-            "text-success",
-            "text-danger",
-            "text-warning",
-            "text-info",
-            "text-primary",
-          ],
-        };
-      },
-      mounted() {
-        // ------------ copy ------------
-        function copyArticle(event) {
-          console.log("1111");
-          const range = document.createRange();
-          range.selectNode(document.getElementById("wechat"));
-          const selection = window.getSelection();
-          if (selection.rangeCount > 0) selection.removeAllRanges();
-          selection.addRange(range);
-          document.execCommand("copy");
-          alert("微信号复制成功！");
-          console.log("6666");
-        }
-        document
-          .getElementById("copyBT")
-          .addEventListener("click", copyArticle, false);
+</div>
 
-        // ------------ JSON 接收 ------------
+<!-- 数据源：本地 js，双击打开（file://）也能用 -->
+<script src="./static/api/data.js"></script>
+<script>
+(function () {
+  "use strict";
+  var D = window.SITE_DATA;
+  if (!D) {
+    document.getElementById("sections").innerHTML =
+      '<p style="color:#9aa1ab">数据未加载：请确认 static/api/data.js 存在。</p>';
+    return;
+  }
 
-        // 这里一定要使用常量 const来引用this，不然可能会出现this指向问题
-        const that = this;
-        // 使用getjson读取数据;
-        $.getJSON("./static/api/data.json", function (data) {
-          // 将读取到的json数据赋值给rows
-          that.datas = data.content;
-          console.log("请求到的数据：", data);
-        });
+  /* ---------- 小工具 ---------- */
+  function esc(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+  function chip(item, cls) {
+    return '<a class="' + (cls || "chip-mini") + '" href="' + esc(item.path) + '">' + esc(item.name) + "</a>";
+  }
 
-        // ------------ 方法结束 ------------
-      },
-    });
-  </script>
+  /* ---------- 信息资料的 SVG 图标表 ---------- */
+  var ICONS = {
+    xuexin: '<path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/>',
+    byzs: '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/>',
+    ryzs: '<circle cx="12" cy="9" r="6"/><path d="m8.5 14-2 7 5.5-3 5.5 3-2-7"/>',
+    cjd: '<path d="M3 3v18h18"/><path d="M7 15v-4M12 15V7M17 15v-7"/>',
+    grjl: '<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/>'
+  };
+  function icon(key) {
+    return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" ' +
+      'stroke-linecap="round" stroke-linejoin="round">' + (ICONS[key] || "") + "</svg>";
+  }
+
+  /* ---------- 头部 ---------- */
+  document.getElementById("eyebrow").textContent = D.meta.eyebrow;
+  document.getElementById("siteTitle").textContent = D.meta.title;
+  document.getElementById("siteSub").textContent = D.meta.sub;
+  document.getElementById("footLeft").textContent = D.meta.footerLeft;
+  document.getElementById("footRight").textContent = D.meta.footerRight;
+
+  document.getElementById("contact").innerHTML = D.contact.map(function (c) {
+    return '<a class="chip" href="' + esc(c.href) + '">' + esc(c.label) +
+      ' <span class="v">' + esc(c.value) + "</span></a>";
+  }).join("");
+
+  /* ---------- 板块标题 ---------- */
+  function sectionHead(sec) {
+    return '<div class="section-head"><span class="section-num">' + esc(sec.num) + "</span>" +
+      '<h2 class="section-title">' + esc(sec.title) + "</h2>" +
+      '<span class="section-desc">' + esc(sec.desc) + "</span></div>";
+  }
+
+  /* ---------- 各板块内容 ---------- */
+  function renderInfo(sec) {
+    var list = sec.items.map(function (it) {
+      return '<a class="info-simple-item" href="' + esc(it.path) + '">' + icon(it.icon) +
+        "<span>" + esc(it.name) + "</span></a>";
+    }).join("");
+    return '<div class="info-simple-list">' + list + "</div>";
+  }
+
+  function renderTemplates(sec) {
+    var cards = sec.groups.map(function (g) {
+      var body = g.todo
+        ? '<span class="tpl-note">尚未产出，后续补齐</span>'
+        : g.items.map(function (it) { return chip(it); }).join("");
+      return '<div class="tpl-card' + (g.todo ? " todo" : "") + '">' +
+        '<div class="tpl-card-head"><span class="tpl-ver">' + esc(g.ver) + "</span>" +
+        '<span class="tpl-tag">' + esc(g.tag) + "</span></div>" +
+        '<div class="tpl-chips">' + body + "</div></div>";
+    }).join("");
+    return '<div class="tpl-grid">' + cards + "</div>";
+  }
+
+  function renderTimeline(sec) {
+    var rows = sec.years.map(function (y) {
+      var cls = "tl-item" + (y.current ? " current" : "") + (y.todo ? " todo" : "");
+      var body = y.todo
+        ? '<span class="tl-note">' + esc(y.note || "待补充") + "</span>"
+        : '<div class="tl-items">' + y.items.map(function (it) { return chip(it); }).join("") + "</div>";
+      return '<div class="' + cls + '"><span class="tl-dot"></span>' +
+        '<div class="tl-row"><span class="tl-year">' + esc(y.year) + "</span>" + body + "</div></div>";
+    }).join("");
+    return '<div class="timeline">' + rows + "</div>";
+  }
+
+  function renderDownloads(sec) {
+    return '<div class="dl-chips">' + sec.items.map(function (it) { return chip(it); }).join("") + "</div>";
+  }
+
+  /* ---------- 组装 ---------- */
+  var blocks = [
+    [D.info, renderInfo],
+    [D.templates, renderTemplates],
+    [D.timeline, renderTimeline],
+    [D.downloads, renderDownloads]
+  ];
+  document.getElementById("sections").innerHTML = blocks.map(function (b) {
+    var sec = b[0];
+    if (!sec) return "";
+    return '<section class="section">' + sectionHead(sec) + b[1](sec) + "</section>";
+  }).join("");
+})();
+</script>
+</body>
 </html>

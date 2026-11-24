@@ -41,7 +41,7 @@
 }
 
 .clearfix:after, #timeline .timeline-item:after, .clearfix:before, #timeline .timeline-item:before {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   clear: both;
@@ -52,7 +52,9 @@
   padding: 0;
   list-style: none;
   text-decoration: none;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   font-family: sans-serif;
 }
 
@@ -110,7 +112,6 @@ p > span {
 header {
   text-align: center;
 }
-
 header p {
   color: #888;
 }
@@ -126,12 +127,8 @@ header p {
   margin: 2rem auto;
   position: relative;
   padding: 0 1rem;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
-
 #timeline:before {
   content: "";
   width: 2px;
@@ -141,81 +138,62 @@ header p {
   top: 0;
   position: absolute;
 }
-
 #timeline:after {
   content: "";
   clear: both;
   display: table;
   width: 100%;
 }
-
 #timeline .timeline-item {
   text-align: right;
   margin-bottom: var(--mb-size);
   position: relative;
   z-index: 1;
 }
-
 #timeline .timeline-item::before {
   background: var(--circle-bg);
   width: var(--circle-size);
   height: var(--circle-size);
   position: absolute;
-  content: '';
+  content: "";
   top: var(--sanjiao-top);
   left: 50%;
   overflow: hidden;
   margin-left: -7px;
   border: var(--circle-border-size) solid var(--circle-border);
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
   border-radius: 50%;
 }
-
 #timeline .timeline-item:after {
   content: "";
   clear: both;
   display: table;
   width: 100%;
 }
-
 #timeline .timeline-item:nth-child(2n of .timeline-item) {
   text-align: left;
 }
-
 #timeline .timeline-item:nth-child(2n of .timeline-item) .timeline-content {
   float: right;
 }
-
 #timeline .timeline-item:nth-child(2n of .timeline-item) .timeline-content:before {
   left: -8px;
 }
-
 #timeline .timeline-item:nth-child(2n of .timeline-item) .timeline-content h3 {
   background-color: var(--h3-bg-2n);
 }
-
 #timeline .timeline-item .timeline-content {
   position: relative;
   z-index: 2;
   border: 1px solid var(--module-border);
   width: 45%;
   background: var(--module-bg);
-  padding: .5rem 1rem;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
+  padding: 0.5rem 1rem;
   border-radius: 8px;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
   filter: drop-shadow(1px 2px 3px rgba(0, 0, 0, 0.4));
 }
-
 #timeline .timeline-item .timeline-content:before {
-  content: '';
+  content: "";
   position: absolute;
   right: -8px;
   top: var(--sanjiao-top);
@@ -227,27 +205,20 @@ header p {
   border-bottom-left-radius: 40%;
   z-index: 0 !important;
 }
-
 #timeline .timeline-item .timeline-content h3 {
   background: var(--h3-bg);
   color: var(--h3-color);
-  -webkit-border-radius: 3px 3px 0 0;
-  -moz-border-radius: 3px 3px 0 0;
-  -ms-border-radius: 3px 3px 0 0;
   border-radius: 3px 3px 0 0;
   position: relative;
 }
-
 #timeline .timeline-item .timeline-content p > span {
   color: var(--span-color);
 }
-
 #timeline .year-title {
   text-align: center;
   margin-bottom: var(--mb-size);
   position: relative;
 }
-
 #timeline .year-title h2 {
   margin: 0 auto;
   width: 10%;
@@ -257,7 +228,6 @@ header p {
   border-radius: 8px;
   z-index: 999;
 }
-
 #timeline .year-title h2:hover {
   color: var(--h2-bg);
   background-color: var(--h2-color);
@@ -273,16 +243,13 @@ footer {
   text-align: center;
   color: var(--footer-color);
 }
-
 footer ul {
   display: flex;
   justify-content: center;
 }
-
 footer ul li {
   margin: 0 4px;
 }
-
 footer ul li a {
   color: var(--footer-color);
 }
@@ -305,7 +272,7 @@ footer ul li a {
   }
   #timeline .year-title h2::after {
     position: absolute;
-    content: '';
+    content: "";
     width: var(--big-circle-size);
     height: var(--big-circle-size);
     background-color: var(--big-circle-bg);
@@ -333,7 +300,6 @@ footer ul li a {
     left: -8px;
   }
 }
-
 .timeline-item:hover::before {
   border-color: #ff5866 !important;
 }

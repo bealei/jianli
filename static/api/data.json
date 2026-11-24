@@ -160,6 +160,19 @@
             "path": "./resumes/jianli-v5.0-2024-2/index.html"
           }
         ]
+      },
+      "a8": {
+        "title": "最新简历",
+        "res": [
+          {
+            "name": "庄磊简历2025",
+            "path": "./resumes/jianli-v5.0-2025-2/index.html"
+          },
+          {
+            "name": "庄磊简历2026",
+            "path": "./resumes/jianli-v5.0-2026-2/index.html"
+          }
+        ]
       }
     }
   }

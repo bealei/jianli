@@ -5,21 +5,18 @@
   font-display: swap;
   font-style: normal;
 }
-
 @font-face {
   font-family: "OPlusSans";
   src: url(../../../static/font/OPlusSans3-Regular.woff2);
   font-display: swap;
   font-style: normal;
 }
-
 @font-face {
   font-family: "HarmonySans";
   src: url(../../../static/font/HarmonyOS_Sans_SC_Regular.woff2);
   font-display: swap;
   font-style: normal;
 }
-
 /* ------------ 主体颜色 ------------ */
 :root {
   /* ----- 绿色主题 ----- */
@@ -137,15 +134,11 @@ strong {
   z-index: 0;
   /* 一条分割线 */
   border-bottom: 5px solid;
-  border-image: linear-gradient(90deg, #fff, #42bc7a, #fff);
+  -o-border-image: linear-gradient(90deg, #fff, #42bc7a, #fff);
+     border-image: linear-gradient(90deg, #fff, #42bc7a, #fff);
   border-image-slice: 1;
   /* 背景字体 */
-  /* 头像包裹*/
-  /* 姓名 */
-  /* 求职意向 */
-  /* 徽章 */
 }
-
 .resume-head .bg-font {
   position: absolute;
   width: 100%;
@@ -155,11 +148,15 @@ strong {
   letter-spacing: 5px;
   font-weight: 700;
   /* 无法选中 */
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   top: 0;
   z-index: -1;
 }
-
+.resume-head {
+  /* 头像包裹*/
+}
 .resume-head .touxiang {
   --size: 100px;
   --gap: 3px;
@@ -170,9 +167,7 @@ strong {
   margin-bottom: 10px;
   z-index: 3;
   /* 头像框旋转  */
-  /* 头像照片 */
 }
-
 .resume-head .touxiang::before {
   position: absolute;
   content: "";
@@ -186,15 +181,20 @@ strong {
   left: calc(0px - var(--gap));
   z-index: -1;
 }
-
+.resume-head .touxiang {
+  /* 头像照片 */
+}
 .resume-head .touxiang img {
   border-radius: 50%;
   height: 100%;
   width: 100%;
   /* 不变形 */
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-
+.resume-head {
+  /* 姓名 */
+}
 .resume-head h2 {
   color: var(--name-color);
   height: 30px;
@@ -204,7 +204,6 @@ strong {
   margin-bottom: 5px;
   /* 认证 V 图标 */
 }
-
 .resume-head h2 i::after {
   height: 30px;
   line-height: 30px;
@@ -214,41 +213,44 @@ strong {
   content: "\e601";
   font-size: 20px;
 }
-
+.resume-head {
+  /* 求职意向 */
+}
 .resume-head .qiuzhi {
   margin-bottom: 5px;
 }
-
 .resume-head .col-shu {
   display: flex;
   justify-content: center;
 }
-
 .resume-head .col-shu li {
   color: #42bc7a;
   padding: 0 6px 0 2px;
-  /* 最后一个没有“|” */
 }
-
 .resume-head .col-shu li::after {
   content: "|";
   color: var(--border-color);
 }
-
+.resume-head .col-shu li {
+  /* 最后一个没有“|” */
+}
 .resume-head .col-shu li:nth-child(5):after {
   content: "";
 }
-
+.resume-head {
+  /* 徽章 */
+}
 .resume-head .huizhang {
   /* position: absolute; */
   /* left: 0; */
   /* bottom: 5px; */
   width: 100%;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   display: flex;
   justify-content: center;
 }
-
 .resume-head .huizhang li {
   color: #fff;
   font-size: 14px;
@@ -258,27 +260,21 @@ strong {
   margin: 0 12px;
   /* 徽章颜色 */
 }
-
 .resume-head .huizhang li:nth-child(1) {
   background-color: var(--huizhang1);
 }
-
 .resume-head .huizhang li:nth-child(2) {
   background-color: var(--huizhang2);
 }
-
 .resume-head .huizhang li:nth-child(3) {
   background-color: var(--huizhang3);
 }
-
 .resume-head .huizhang li:nth-child(4) {
   background-color: var(--huizhang4);
 }
-
 .resume-head .huizhang li:nth-child(5) {
   background-color: var(--huizhang5);
 }
-
 .resume-head .huizhang li:nth-child(6) {
   background-color: var(--huizhang6);
 }
@@ -292,7 +288,6 @@ strong {
     transform: rotate(360deg);
   }
 }
-
 /* ------------------------ 简历主体-单体布局 start------------------------ */
 /* 单体布局 */
 .resume-main {
@@ -306,10 +301,7 @@ strong {
 .module {
   width: 100%;
   /* 模块标题 */
-  /* 模块内容 */
-  /* 模块包 */
 }
-
 .module .module-title {
   height: 30px;
   line-height: 30px;
@@ -322,11 +314,15 @@ strong {
   /* display: inline; */
   padding: 0 24px 0 12px;
 }
-
+.module {
+  /* 模块内容 */
+}
 .module .module-content {
   padding: var(--module-content-gy) var(--module-content-gx);
 }
-
+.module {
+  /* 模块包 */
+}
 .module .module-wrap {
   margin-bottom: 10px;
 }
@@ -338,16 +334,13 @@ strong {
   font-weight: 700;
   /* flex: 1; */
 }
-
 .col-3 li {
   flex: 1;
   /* border: 1px solid red; */
 }
-
 .col-3 li:nth-child(2) {
   flex: 1.5;
 }
-
 .col-3 li:nth-child(3) {
   flex: 1;
 }
@@ -412,8 +405,8 @@ strong {
 
 /* ----- 技能特长 ----- */
 .jineng li:before {
-  content: "\2022";
-  content: "\25cf";
+  content: "•";
+  content: "●";
   margin: 20px 5px;
 }
 
@@ -422,7 +415,7 @@ strong {
 }
 
 .pingjia li:before {
-  content: "\2713";
+  content: "✓";
   margin: 20px 5px;
 }
 
@@ -433,7 +426,6 @@ strong {
   text-align: center;
   color: var(--foot-color);
 }
-
 .resume-foot a {
   color: var(--foot-color);
 }
